@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-// import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { Helmet } from 'react-helmet';
 
@@ -20,7 +20,6 @@ import '../natura11y/modules/display';
 import '../natura11y/modules/flex';
 import '../natura11y/modules/grid';
 import '../natura11y/modules/icons';
-import '../natura11y/modules/language';
 import '../natura11y/modules/links';
 import '../natura11y/modules/opacity';
 import '../natura11y/modules/overflow';
