@@ -31,12 +31,12 @@ const portfolioSingle = ({ data }) => {
             '--primary': `#FFCB62`,
             '--primary-text': `var(--dark)`,
         }}>
-      <Header />
-      <div className="container medium text-align-center">
+      
+        <Header />
+      
+        <div className="container medium text-align-center">
 
-        <h1 class="margin-bottom-4">{title}</h1>
-
-        <div className="marquee">
+          <h1 class="margin-bottom-4">{title}</h1>
 
           <GatsbyImage
             image={marqueeImage}
@@ -44,9 +44,6 @@ const portfolioSingle = ({ data }) => {
           />
 
         </div>
-
-
-      </div>
       
       </div>
 
