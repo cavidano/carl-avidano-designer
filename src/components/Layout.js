@@ -45,7 +45,7 @@ import '../natura11y/theme';
 
 const Layout = ({ children }) => {
 
-  const [themeMode, setThemeMode] = useState('light');
+  const [themeMode, setThemeMode] = useState('dark');
 
   useEffect(() => {
 

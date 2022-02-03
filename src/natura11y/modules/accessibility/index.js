@@ -1,4 +1,4 @@
-import './_style.scss';
+import "./_style.scss"
 
 //////////////////////////////////////////////
 // Accessibility
@@ -6,42 +6,37 @@ import './_style.scss';
 
 export default class Accessibility {
 
-    constructor() {
-        
-        const elements = [
-            'a[href]',
-            'button',
-            '[role="tab"]',
-            '[data-toggle="accordion"]'
-        ];
+  constructor() {
+  
+    const elements = [
+      'a[href]',
+      'button',
+      '[role="tab"]',
+      '[data-toggle="accordion"]',
+    ];
 
-        const initFocus = () => {
+    const focusableElementList = document.querySelectorAll(elements);
 
-            const focusableElementList = document.querySelectorAll(elements);
+    focusableElementList.forEach(focusableElement => {
+      let mouseDown = false;
 
-            focusableElementList.forEach((focusableElement) => {
+      focusableElement.addEventListener('mousedown', () => {
+        mouseDown = true;
+      });
 
-                let mouseDown = false;
+      focusableElement.addEventListener('mouseup', () => {
+        mouseDown = false;
+      });
 
-                focusableElement.addEventListener('mousedown', () => {
-                    mouseDown = true;
-                });
-
-                focusableElement.addEventListener('mouseup', () => {
-                    mouseDown = false;
-                });
-
-                focusableElement.addEventListener('focus', (event) => {
-                    if (mouseDown) {
-                        event.target.blur();
-                    }
-                });
-
-            });
+      focusableElement.addEventListener('focus', event => {
+        if (mouseDown) {
+          event.target.blur();
         }
+      });
 
-        initFocus();
+    });
 
-        // window.addEventListener('DOMContentLoaded', initFocus, { once: true });
-    }
+  }
+  
+
 }
