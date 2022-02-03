@@ -40,6 +40,6 @@ export default class Accessibility {
             });
         }
 
-        window.addEventListener('load', initFocus, { once: true });
+        window.addEventListener('DOMContentLoaded', initFocus, { once: true });
     }
 }
