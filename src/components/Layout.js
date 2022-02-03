@@ -95,7 +95,7 @@ const Layout = ({ children }) => {
 
       <div className='theme-canvas' data-mode={themeMode}>
 
-        <div className="position-top-right margin-2">
+        <div className="theme-button-container">
           <button
             class="button button--icon-only"
             onClick={handleThemeModeClick}>
