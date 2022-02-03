@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-
-import Header from './Header';
+import React, { Fragment, useEffect, useState } from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -43,9 +41,11 @@ import Navigation from '../natura11y/modules/navigation';
 import Tabs from '../natura11y/modules/tabs';
 import Tables from '../natura11y/modules/tables';
 
-// import '../natura11y/modules/theme';
+import '../natura11y/theme';
 
 const Layout = ({ children }) => {
+
+  const [themeMode, setThemeMode] = useState('light');
 
   useEffect(() => {
 
@@ -63,6 +63,14 @@ const Layout = ({ children }) => {
 
   }, []);
 
+  const handleThemeModeClick = () => {
+    if(themeMode === 'light') {
+      setThemeMode('dark');
+    } else if(themeMode === 'dark') {
+      setThemeMode('light');
+    }
+  }
+
   const data = useStaticQuery(graphql`
     query SiteInfo {
       site {
@@ -78,18 +86,24 @@ const Layout = ({ children }) => {
   const title = data.site.siteMetadata.title;
 
   return (
-    <div className="Layout">
+    <Fragment>
       
       <Helmet htmlAttributes={{ lang: 'en' }}>
         <title>{name} • {title}</title>
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <div className='height-100vh  overflow-hidden flex-column'>
+      <div className='theme-canvas' data-mode={themeMode}>
 
-        <Header />
+        <div className="position-top-right margin-2">
+          <button
+            class="button button--icon-only"
+            onClick={handleThemeModeClick}>
+              <span class="icon icon-mode-light-dark" aria-hidden="true"></span>
+          </button>
+        </div>
 
-        <main className="flex-grow-1 flex-column justify-content-center" id="skip-header-target">
+        <main id="skip-header-target">
         
           {children}
 
@@ -97,8 +111,7 @@ const Layout = ({ children }) => {
 
       </div>
 
-      
-    </div>
+    </Fragment>
   );
 }
 

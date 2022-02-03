@@ -27,13 +27,11 @@ In this file:
     // Theme Color Palette
 
     --primary: #440381;
-    --secondary: #ffcc66;
     --dark: #000;
-    --light: #f2edeb;
+    --light: #fff;
 
     // Accessible Link Color
-    // (Used with White and Light Themes)
-
+    
     --a11y-link: #0066cc;
 
     // Primary Correlated Colors
@@ -44,50 +42,18 @@ In this file:
     --primary-confirm: #16db93;
     --primary-warn: #ff73aa;
 
-    // Secondary Correlated Colors
+    // Canvas Correlated Colors
 
-    --secondary-text: var(--dark);
-    --secondary-border: hsla(0, 0%, 0%, 0.25);
-    --secondary-link: currentColor;
-    --secondary-confirm: #41e0f2;
-    --secondary-warn: #ffa3a4;
-
-    // Dark Correlated Colors
-
-    --dark-text: white;
-    --dark-border: hsla(0, 0%, 100%, 0.125);
-    --dark-link: #21b2fa;
-    --dark-confirm: #00a242;
-    --dark-warn: #fe3c3e;
-
-    // Light Correlated Colors
-
-    --light-text: var(--dark);
-    --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: var(--a11y-link);
-    --light-confirm: #007e35;
-    --light-warn: #ce1736;
-
-    // White Correlated Colors
-
-    --white-text: var(--dark);
-    --white-border: hsla(0, 0%, 50%, 0.25);
-    --white-link: var(--a11y-link);
-    --white-confirm: #008237;
-    --white-warn: #e4193c;
+    --canvas: var(--light);
+    --canvas-text: var(--dark);
+    --canvas-border: hsla(0, 0%, 50%, 0.25);
+    --canvas-link: var(--a11y-link);
+    --canvas-confirm: #008237;
+    --canvas-warn: #e4193c;
 }
 
 $theme-colors: (
-
-    "white": (
-        swatch: white,
-        text: var(--white-text),
-        border: var(--white-border),
-        link: var(--white-link),
-        confirm: var(--white-confirm),
-        warn: var(--white-warn)
-    ), 
-        
+ 
     "primary": (
         swatch: var(--primary),
         text: var(--primary-text),
@@ -96,33 +62,16 @@ $theme-colors: (
         confirm: var(--primary-confirm),
         warn: var(--primary-warn)
     ), 
+
+    "canvas": (
+        swatch: var(--canvas),
+        text: var(--canvas-text),
+        border: var(--canvas-border),
+        link: var(--canvas-link),
+        confirm: var(--canvas-confirm),
+        warn: var(--canvas-warn)
+    )
     
-    // "secondary": (
-    //     swatch: var(--secondary),
-    //     text: var(--secondary-text),
-    //     border: var(--secondary-border),
-    //     link: var(--secondary-link),
-    //     confirm: var(--secondary-confirm),
-    //     warn: var(--secondary-warn)
-    // ), 
-    
-    "dark": (
-        swatch: var(--dark),
-        text: var(--dark-text),
-        border: var(--dark-border),
-        link: var(--dark-link),
-        confirm: var(--dark-confirm),
-        warn: var(--dark-warn)
-    ),
-    
-    // "light": (
-    //     swatch: var(--light),
-    //     text: var(--light-text),
-    //     border: var(--light-border),
-    //     link: var(--light-link),
-    //     confirm: var(--light-confirm),
-    //     warn: var(--light-warn)
-    // )
 );
 
 //////////////////////////////////////////////
@@ -132,10 +81,7 @@ $theme-colors: (
 body:not([class*="theme-"]),
 body > footer:not([class*="theme-"]),
 [class*="theme-"],
-[data-active-theme] [aria-current],
-[data-active-theme] [aria-expanded="true"],
-[data-active-theme] [aria-current] + .nav__dropdown
-{
+[data-mode] {
     background-color: var(--background-color);
 
     color: var(--text-color);
@@ -248,6 +194,7 @@ body > footer:not([class*="theme-"]),
 // D. Wayfinding 
 //////////////////////////////////////////////
 
+
 @each $name, $color-map in $theme-colors {
     $swatch: map.get($color-map, "swatch");
     $text: map.get($color-map, "text");
@@ -274,4 +221,17 @@ body > footer:not([class*="theme-"]),
 
     }
 
+}
+
+//////////////////////////////////////////////
+// D. Wayfinding 
+//////////////////////////////////////////////
+
+[data-mode="dark"]{
+    --canvas: var(--dark) ;
+    --canvas-text: var(--light);
+    --canvas-border: hsla(0, 0%, 50%, 0.25);
+    --canvas-link: var(--a11y-link);
+    --canvas-confirm: #008237;
+    --canvas-warn: #e4193c;
 }

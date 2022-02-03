@@ -1,13 +1,17 @@
-import React, { useEffect } from 'react';
+import React, {Fragment, useEffect } from 'react';
 
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Layout from '../components/Layout';
+import Header from '../components/Header.js';
 
 const Home = () => {
+
+
   return (
-    <Layout>
+    <Fragment>
+
+      <Header />
       
       <div className="container wide align-self-center text-align-center">
 
@@ -20,8 +24,7 @@ const Home = () => {
         </a>
 
       </div>
-
-    </Layout>
+    </Fragment>
   )
 }
 

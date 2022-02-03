@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const Header = () => {
   return (
-    <header className="padding-4 text-align-center">
+    <header className="padding-3 text-align-center">
 
         <Link to="/">
             <p className='h5 margin-bottom-0'>Carl Avidano</p>
@@ -13,7 +13,7 @@ const Header = () => {
 
         <nav className='margin-top-3'>
 
-            <ul className="nav nav--horizontal justify-content-center font-size-sm text-transform-uppercase">
+            <ul className="nav nav--horizontal justify-content-center font-size-md text-transform-uppercase">
                 <li>
                     <Link to="/portfolio">Portfolio</Link>
                 </li>
