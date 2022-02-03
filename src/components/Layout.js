@@ -102,12 +102,8 @@ const Layout = ({ children }) => {
               <span class="icon icon-mode-light-dark" aria-hidden="true"></span>
           </button>
         </div>
-
-        <main id="skip-header-target">
         
-          {children}
-
-        </main>
+        {children}
 
       </div>
 

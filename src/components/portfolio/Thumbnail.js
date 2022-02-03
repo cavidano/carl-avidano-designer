@@ -8,7 +8,7 @@ const Thumbnail = (props) => {
      } = props;
 
     return (
-        <div class="backdrop backdrop--fixed theme-primary justify-content-end border-radius" style={{'height': '100%', '--primary': `${primaryColor}`}}>
+        <div class="backdrop backdrop--fixed aspect-ratio-1x1 theme-primary justify-content-end border-radius" style={{'height': '100%', '--primary': `${primaryColor}`}}>
 
             <div class="backdrop__image gradient-veneer-bottom">
                 <img src={imgURL} alt="Placeholder" />

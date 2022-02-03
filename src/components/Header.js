@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="padding-3 text-align-center">
 
-        <Link to="/">
+        <Link className="display-inline-block" to="/">
             <p className='h5 margin-bottom-0'>Carl Avidano</p>
             <p className='font-size-md'>Senior UX Designer</p>
         </Link>
