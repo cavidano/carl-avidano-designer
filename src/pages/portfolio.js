@@ -11,9 +11,9 @@ const Portfolio = () => {
   return (
     <Layout>
       
-      <div className="height-100">
+      <div className="height-100 padding-3">
 
-        <div class="grid grid--column-4 gap-1 height-100">
+        <div class="grid grid--column-4 gap-2 height-100">
 
             <Thumbnail
                 primaryColor="#0D5155"
