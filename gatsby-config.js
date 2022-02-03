@@ -22,7 +22,21 @@ module.exports = {
       options: {
         plugins: [`mdx-yaml-full`]
       }
-  },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/content/portfolio/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    }
   ]
   
 }
