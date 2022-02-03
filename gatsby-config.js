@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Natura11y Inclusive Framework",
-    version: "v0.1.x-alpha",
+    name: "Carl Avidano",
+    title: "Senior UX Designer",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

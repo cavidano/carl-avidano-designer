@@ -67,27 +67,25 @@ const Layout = ({ children }) => {
     query SiteInfo {
       site {
         siteMetadata {
+          name
           title
-          version
         }
       }
     }
   `);
 
+  const name = data.site.siteMetadata.name;
   const title = data.site.siteMetadata.title;
-  const version = data.site.siteMetadata.version;
 
   return (
     <div className="Layout">
       
-      <Helmet htmlAttributes={{
-        lang: 'en',
-      }}>
-        <title>{title}</title>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
+        <title>{name} • {title}</title>
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <div className='height-100vh theme-dark overflow-hidden flex-column'>
+      <div className='height-100vh  overflow-hidden flex-column'>
 
         <Header />
 

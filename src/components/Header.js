@@ -13,7 +13,7 @@ const Header = () => {
 
         <nav className='margin-top-3'>
 
-            <ul className="nav nav--horizontal justify-content-center">
+            <ul className="nav nav--horizontal justify-content-center font-size-sm text-transform-uppercase">
                 <li>
                     <Link to="/portfolio">Portfolio</Link>
                 </li>
