@@ -26,6 +26,7 @@ const Portfolio = () => {
               <Preview
                   primaryColor="#0D5155"
                   imgURL="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9fd6f1135821675.61f2a103849c0.jpg"
+                  slug="natura11y-inclusive-framework"
               />
 
               <Preview

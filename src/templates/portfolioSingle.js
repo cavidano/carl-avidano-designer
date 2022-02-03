@@ -18,6 +18,8 @@ const shortcodes = {
 const portfolioSingle = ({ data }) => {
 
   const { title } = data.singleProject.frontmatter;
+  const { backgroundColor } = data.singleProject.frontmatter;
+  const { textColor } = data.singleProject.frontmatter;
   const { body } = data.singleProject;
     
   // const projects = data.allProjects.nodes;
@@ -28,8 +30,8 @@ const portfolioSingle = ({ data }) => {
 
       <div className="project-intro theme-primary"
         style={{
-            '--primary': `#FFCB62`,
-            '--primary-text': `var(--dark)`,
+            '--primary': `${backgroundColor}`,
+            '--primary-text': `${textColor}`,
         }}>
       
         <Header />
@@ -38,10 +40,10 @@ const portfolioSingle = ({ data }) => {
 
           <h1 class="margin-bottom-4">{title}</h1>
 
-          <GatsbyImage
-            image={marqueeImage}
-            alt=""
-          />
+            <GatsbyImage
+              image={marqueeImage}
+              alt=""
+            />
 
         </div>
       
@@ -72,6 +74,8 @@ query queryPageData($slug: String) {
       body
       frontmatter {
           title
+          backgroundColor
+          textColor
           marqueeImage {
             childImageSharp {
               gatsbyImageData
