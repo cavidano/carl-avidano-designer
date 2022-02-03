@@ -17,5 +17,8 @@ main {
 }
 
 .theme-button-container {
-    // theme-button-container
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: var(--spacer-2);
 }
