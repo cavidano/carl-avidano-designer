@@ -30,6 +30,7 @@ module.exports = {
         path: `${__dirname}/src/content/portfolio/`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
