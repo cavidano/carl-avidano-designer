@@ -45,7 +45,6 @@ import Tables from '../natura11y/modules/tables';
 
 // import '../natura11y/modules/theme';
 
-
 const Layout = ({ children }) => {
 
   useEffect(() => {
