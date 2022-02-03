@@ -23,11 +23,11 @@ In this file:
 :root {
     --container-padding-x: var(--spacer-3);
 
-    --narrow-width: 40rem; // Approximately 55 characters wide for readability
+    --narrow-width: 38rem; // Approximately 55 characters wide for readability
     
-    --medium-width: calc( var(--narrow-width) * 1.75);
+    --medium-width: calc( var(--narrow-width) * 2);
     
-    --wide-width: calc( var(--narrow-width) * 2.5);
+    --wide-width: calc( var(--narrow-width) * 3);
 }
 
 //////////////////////////////////////////////

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import Header from './Header';
+
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Helmet } from 'react-helmet';
@@ -84,13 +86,21 @@ const Layout = ({ children }) => {
         lang: 'en',
       }}>
         <title>{title}</title>
+        <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <main className="content" id="skip-header-target">
+      <div className='height-100vh theme-dark overflow-hidden flex-column'>
 
-      {children}
+        <Header />
 
-      </main>
+        <main className="flex-grow-1 flex-column justify-content-center" id="skip-header-target">
+        
+          {children}
+
+        </main>
+
+      </div>
+
       
     </div>
   );

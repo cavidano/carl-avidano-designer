@@ -35,11 +35,11 @@ In this file:
 
     // Body Font Stack
 
-    --body-font-family: "Source Sans Pro";
+    --body-font-family: "neue-haas-grotesk-display";
     
-    --body-font-weight-normal: 400;
+    --body-font-weight-normal: 500;
     --body-font-weight-medium: 600;
-    --body-font-weight-bold: 700;
+    --body-font-weight-bold: 900;
 
     --body-font-size: 20px;
     --body-line-height: 1.4;
@@ -65,8 +65,8 @@ In this file:
 
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 3.8);
-    --banner-headline-font-weight: var(--body-font-weight-normal);
+    --banner-headline-font-size: calc(var(--body-font-size) * 5);
+    --banner-headline-font-weight: var(--body-font-weight-bold);
 
     // Paragraph
 
