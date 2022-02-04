@@ -16,7 +16,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `blurred`,
+          quality: 95
+        }
+      }
+    },
     {
       resolve: 'gatsby-transformer-yaml-full',
       options: {

@@ -41,7 +41,7 @@ In this file:
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 900;
 
-    --body-font-size: 20px;
+    --body-font-size: 22px;
     --body-line-height: 1.4;
 
     // Font Sizes
@@ -49,8 +49,8 @@ In this file:
     --font-size-sm: calc(var(--body-font-size) * 0.75);  // ~ 16.5px
     --font-size-md: calc(var(--body-font-size) * 0.825);  // ~ 18px
     --font-size-rg: calc(var(--body-font-size) * 1);    // = 22px
-    --font-size-lg: calc(var(--body-font-size) * 1.2);  // ~ 26px
-    --font-size-xl: calc(var(--body-font-size) * 1.4);  // ~ 30px
+    --font-size-lg: calc(var(--body-font-size) * 2);  // ~ 26px
+    --font-size-xl: calc(var(--body-font-size) * 3);  // ~ 30px
 
     // Headers
 
@@ -61,7 +61,7 @@ In this file:
     --h5-font-size: calc(var(--body-font-size) * 1.4);  // ~ 30px
     --h6-font-size: calc(var(--body-font-size) * 1.2);  // ~ 26px
 
-    --header-line-height: 1.2;
+    --header-line-height: 1.25;
 
     // Banner Headline
 

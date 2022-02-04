@@ -6,13 +6,15 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Header from '../components/Header.js';
 import TextBlock from '../components/portfolio/TextBlock.js';
+import IntroBlock from '../components/portfolio/IntroBlock.js';
 
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const shortcodes = {
   StaticImage,
   GatsbyImage,
-  TextBlock
+  TextBlock,
+  IntroBlock
 };
 
 const portfolioSingle = ({ data }) => {
