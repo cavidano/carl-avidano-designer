@@ -20,7 +20,6 @@ main {
     bottom: 0;
     right: 0;
     margin: var(--spacer-2);
-}
 
-.marquee-container {
+    z-index: 10000;
 }
