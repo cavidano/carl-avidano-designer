@@ -55,7 +55,7 @@ const portfolioSingle = ({ data }) => {
       </div>
 
         
-      <div className="container margin-y-4">
+      <div className="margin-y-4">
 
 
         <MDXProvider components={shortcodes}>

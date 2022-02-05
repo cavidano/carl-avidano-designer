@@ -256,10 +256,13 @@ ol:not([class]) {
 }
 
 figure {
+    > p {
+        margin-block-end: unset;
+    }
     figcaption {
         font-size: var(--font-size-sm);
-        opacity: 0.85;
-        margin-block-start: var(--spacer-2);
+        opacity: 0.75;
+        margin-block-start: var(--spacer-1);
     }
 }
 

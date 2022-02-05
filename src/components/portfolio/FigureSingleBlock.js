@@ -1,21 +1,25 @@
 import React from "react";
 
-const FigureSingleBlock = ({children, ...props}) => {
+const FigureSingleBlock = ({ children, ...props }) => {
 
-    const { figureCaption } = props;
+    const { caption } = props;
 
     return (
-        <figure className="medium margin-y-4 border">
+        <figure className="medium margin-y-5">
+
             {children}
-            {figureCaption != null && (
-                <p>whoa!! {figureCaption}</p>
+        
+            {caption != null && (
+                <figcaption className="container narrow font-size-md">
+                    <p><em>{caption}</em></p>
+                </figcaption>
             )}
         </figure>
     );
 }
 
 FigureSingleBlock.defaultProps = {
-    figureCaption: null
+    caption: null
 }
 
 export default FigureSingleBlock;
