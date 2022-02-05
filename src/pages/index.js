@@ -20,7 +20,7 @@ const Home = () => {
             I seek to inspire empathy and inclusion through accessible experience and interaction design.
           </h1>
 
-          <a class="button button--outline font-size-lg margin-y-4" href="#1">
+          <a class="button button--outline margin-y-4" href="#1">
             Fucking Hire Me Already
           </a>
 
