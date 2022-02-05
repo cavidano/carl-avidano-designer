@@ -2,6 +2,7 @@ import React, {Fragment, useEffect } from 'react';
 
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
 import Header from '../components/Header.js';
 

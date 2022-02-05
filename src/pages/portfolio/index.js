@@ -1,13 +1,44 @@
 import React, { Fragment, useEffect } from 'react';
 
+import { Link, graphql } from 'gatsby';
 
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Header from '../../components/Header.js';
-import Preview from '../../components/portfolio/Preview';
 
-const Portfolio = () => {
+const Portfolio = ({ data }) => {
+
+  const projects = data.allProjects.nodes;
+
+  const myProjects = projects.map((project) => (
+
+    <Link
+      class="backdrop backdrop--fixed aspect-ratio-1x1 theme-primary justify-content-end border-radius"
+      to={`/portfolio/${project.slug}`}
+      key={project.id}
+      style={{
+        '--primary': `${project.frontmatter.backgroundColor}`,
+        '--primary-text': `${project.frontmatter.textColor}`
+      }}>
+
+      <div class="backdrop__image gradient-veneer-bottom">
+        <GatsbyImage
+          image={getImage(project.frontmatter.previewImage)}
+          alt=""
+        />
+      </div>
+
+      <div class="backdrop__cover">
+
+          <div class="container margin-y-2">
+              <p class="h6">
+              {project.frontmatter.title}
+              </p>
+          </div>
+
+      </div>
+
+    </Link>
+  ));
 
   return (
 
@@ -17,33 +48,13 @@ const Portfolio = () => {
 
       <main className="height-100 padding-3" id="skip-header-target">
 
-        <section className="container narrow medium--md wide--lg">
+        <section className="container narrow medium">
 
           <h1 className="screen-reader-only">Select Projects</h1>
 
-          <div class="grid grid--column-2--md grid--column-4--lg gap-2">
+          <div class="grid grid--column-2--md grid--column-3--lg gap-3 margin-y-4">
 
-              <Preview
-                  primaryColor="#0D5155"
-                  imgURL="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9fd6f1135821675.61f2a103849c0.jpg"
-                  slug="natura11y-inclusive-framework"
-              />
-
-              <Preview
-                  primaryColor="#FFCB62"
-                  imgURL="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/b434be82361669.5d1b5129d5ed3.jpg"
-                  slug="cheetah-conservation-fund"
-              />
-
-              <Preview
-                  primaryColor="#116738"
-                  imgURL="https://mir-s3-cdn-cf.behance.net/project_modules/fs/c099b770857177.5c405fe671a4b.jpg"
-              />
-
-              <Preview
-                  primaryColor="#2C9DBB"
-                  imgURL="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/534b3870858499.5bb322ace30be.jpg"
-              />
+          {myProjects}
                 
           </div>
 
@@ -57,3 +68,23 @@ const Portfolio = () => {
 }
 
 export default Portfolio;
+
+export const query = graphql`
+query myQuery($title: StringQueryOperatorInput = {}) {
+  allProjects: allMdx(filter: {frontmatter: {title: $title}}) {
+    nodes {
+      frontmatter {
+        title
+        backgroundColor
+        textColor
+        previewImage {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      slug
+    }
+  }
+}
+`;

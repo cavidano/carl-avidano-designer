@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Header from '../components/Header.js';
 import TextBlock from '../components/portfolio/TextBlock.js';
 import IntroBlock from '../components/portfolio/IntroBlock.js';
+import LiveProjectLink from '../components/portfolio/LiveProjectLink.js';
 
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -14,7 +15,8 @@ const shortcodes = {
   StaticImage,
   GatsbyImage,
   TextBlock,
-  IntroBlock
+  IntroBlock,
+  LiveProjectLink
 };
 
 const portfolioSingle = ({ data }) => {
@@ -23,8 +25,7 @@ const portfolioSingle = ({ data }) => {
   const { backgroundColor } = data.singleProject.frontmatter;
   const { textColor } = data.singleProject.frontmatter;
   const { body } = data.singleProject;
-    
-  // const projects = data.allProjects.nodes;
+
   const marqueeImage = getImage(data.singleProject.frontmatter.marqueeImage);
 
   return (
