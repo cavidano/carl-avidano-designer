@@ -23,3 +23,15 @@ main {
 
     z-index: 10000;
 }
+
+
+.square {
+    transition: transform 0.375s ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.0125);
+    }
+
+  }
+    
