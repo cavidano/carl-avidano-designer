@@ -26,11 +26,11 @@ main {
 
 
 .square {
-    transition: transform 0.375s ease-in-out;
+    transition: transform 0.25s ease-in-out;
 
     &:hover,
     &:focus {
-      transform: scale(1.0125);
+      transform: scale(1.05);
     }
 
   }
