@@ -12,7 +12,7 @@ const Portfolio = ({ data }) => {
   const myProjects = projects.map((project) => (
 
     <Link
-      class="backdrop backdrop--fixed aspect-ratio-1x1 theme-primary justify-content-end border-radius"
+      class="backdrop aspect-ratio-1x1 theme-primary border-radius square"
       to={`/portfolio/${project.slug}`}
       key={project.id}
       style={{
@@ -27,9 +27,9 @@ const Portfolio = ({ data }) => {
         />
       </div>
 
-      <div class="backdrop__cover">
+      <div class="backdrop__cover justify-content-end">
 
-          <div class="container margin-y-2">
+          <div class="container width-100 margin-y-2">
               <p class="h6">
               {project.frontmatter.title}
               </p>
