@@ -70,8 +70,10 @@ const Portfolio = ({ data }) => {
 export default Portfolio;
 
 export const query = graphql`
-query myQuery($title: StringQueryOperatorInput = {}) {
-  allProjects: allMdx(filter: {frontmatter: {title: $title}}) {
+query myQueryallMdx {
+  allProjects: allMdx(
+    sort: {fields: frontmatter___sortOrder, order: ASC}
+  ) {
     nodes {
       frontmatter {
         title
