@@ -1,4 +1,12 @@
 
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+//src/natura11y/modules/shadows/_style.scss
+
+@use "../modules/shadows/style" as shadows;
+
 .theme-canvas, 
 main.home {
     display: flex;
@@ -31,6 +39,5 @@ main {
     &:focus {
       transform: scale(1.0375);
     }
-
   }
     
