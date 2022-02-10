@@ -41,37 +41,46 @@ In this file:
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 900;
 
-    --body-font-size: 22px;
-    --body-line-height: 1.4;
+    --body-font-size: 24px;
+    --body-line-height: 1.5;
 
     // Font Sizes
 
-    --font-size-sm: calc(var(--body-font-size) * 0.75);  // ~ 16.5px
-    --font-size-md: calc(var(--body-font-size) * 0.825);  // ~ 18px
+    --font-size-sm: calc(var(--body-font-size) * 0.625);  // ~ 16.5px
+    --font-size-md: calc(var(--body-font-size) * 0.75);  // ~ 18px
     --font-size-rg: calc(var(--body-font-size) * 1);    // = 22px
     --font-size-lg: calc(var(--body-font-size) * 2);  // ~ 26px
     --font-size-xl: calc(var(--body-font-size) * 3);  // ~ 30px
 
     // Headers
 
-    --h1-font-size: calc(var(--body-font-size) * 3);    // ~ 60px
-    --h2-font-size: calc(var(--body-font-size) * 2.2);  // ~ 48px
-    --h3-font-size: calc(var(--body-font-size) * 1.8);  // ~ 40px
-    --h4-font-size: calc(var(--body-font-size) * 1.6);  // ~ 35px
-    --h5-font-size: calc(var(--body-font-size) * 1.4);  // ~ 30px
+    --h1-font-size: calc(var(--body-font-size) * 2.375);    // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 2);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.75);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.5);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.25);  // ~ 30px
     --h6-font-size: calc(var(--body-font-size) * 1);  // ~ 26px
 
     --header-line-height: 1.25;
 
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 5);
+    --banner-headline-font-size: calc(var(--body-font-size) * 3);
     --banner-headline-font-weight: var(--body-font-weight-bold);
 
     // Paragraph
 
     --paragraph-margin-bottom: 1.25em;
 }
+
+// Mobile sizes
+
+@include breakpoints.breakpoints-down(md){
+    :root {
+        --body-font-size: 18px;
+    }
+}
+
 
 //////////////////////////////////////////////
 // C. Font Weight Utilities
