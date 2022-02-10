@@ -27,7 +27,6 @@ In this file:
     // Theme Color Palette
 
     --primary: #440381;
-    --light: #fff;
 
     --light: #F5F5F5;
     --dark: #181818;
@@ -233,7 +232,7 @@ body > footer:not([class*="theme-"]),
     --canvas: var(--dark) ;
     --canvas-text: var(--light);
     --canvas-border: hsla(0, 0%, 50%, 0.25);
-    --canvas-link: var(--a11y-link);
+    --canvas-link: #67a6ff;
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
 }

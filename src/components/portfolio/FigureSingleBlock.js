@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const FigureSingleBlock = ({ children, ...props }) => {
 
     const { caption, boxShadow } = props;
-
+    
     return (
         <figure className={`medium margin-y-5 ${boxShadow && 'figure-has-shadow'}`}>
-        
+
             {children}
         
             {caption != null && (

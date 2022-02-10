@@ -21,7 +21,7 @@ const Home = () => {
           </h1>
 
           <a class="button button--outline margin-y-4" href="#1">
-            Fucking Hire Me Already
+            See my work
           </a>
 
         </section>
