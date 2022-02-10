@@ -49,7 +49,7 @@ module.exports = {
               maxWidth: 2000,
               quality: 95
             },
-          },
+          }
         ],
       },
     },

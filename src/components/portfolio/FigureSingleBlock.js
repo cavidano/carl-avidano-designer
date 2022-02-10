@@ -2,10 +2,10 @@ import React from 'react';
 
 const FigureSingleBlock = ({ children, ...props }) => {
 
-    const { caption, boxShadow } = props;
+    const { caption } = props;
     
     return (
-        <figure className={`medium margin-y-5 ${boxShadow && 'figure-has-shadow'}`}>
+        <figure className="medium margin-y-5">
 
             {children}
         
@@ -20,8 +20,7 @@ const FigureSingleBlock = ({ children, ...props }) => {
 }
 
 FigureSingleBlock.defaultProps = {
-    caption: null,
-    boxShadow: false
+    caption: null
 }
 
 export default FigureSingleBlock;
