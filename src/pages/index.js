@@ -14,7 +14,7 @@ const Home = () => {
 
       <main className="home" id="skip-header-target">
             
-        <section className="container wide align-self-center text-align-center">
+        <section className="container medium align-self-center text-align-center">
 
           <h1 className="banner-headline">
             I seek to inspire empathy and inclusion through accessible experience and interaction design.
