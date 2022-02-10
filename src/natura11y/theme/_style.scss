@@ -3,17 +3,16 @@
 // A. Modules
 //////////////////////////////////////////////
 
-//src/natura11y/modules/shadows/_style.scss
-
 @use "../modules/shadows/style" as shadows;
 
-.theme-canvas, 
+.full-height-container, 
 main.home {
     display: flex;
 }
 
-.theme-canvas {
+.full-height-container {
     min-height: 100vh;
+
     flex-direction: column;
 }
 
@@ -23,10 +22,12 @@ main {
     }
 }
 
-.theme-button-container {
+.mode-toggle-button-container {
     position: fixed;
-    bottom: 0;
-    right: 0;
+
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    
     margin: var(--spacer-2);
 
     z-index: 10000;

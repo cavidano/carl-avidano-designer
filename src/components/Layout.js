@@ -93,11 +93,11 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <div className='theme-canvas' data-mode={themeMode}>
+      <div className='theme-canvas full-height-container' data-mode={themeMode}>
 
-        <div className="theme-button-container">
+        <div className="mode-toggle-button-container">
           <button
-            class="button button--icon-only"
+            class="button theme-canvas button--icon-only"
             onClick={handleThemeModeClick}>
               <span class="icon icon-mode-light-dark" aria-hidden="true"></span>
           </button>
