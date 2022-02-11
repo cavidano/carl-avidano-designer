@@ -43,7 +43,7 @@ const portfolioSingle = ({ data }) => {
       
         <div className="container medium text-align-center">
 
-          <h1 class="margin-bottom-4">{title}</h1>
+          <h1 class="margin-y-4">{title}</h1>
 
             <GatsbyImage
               image={marqueeImage}
@@ -53,10 +53,8 @@ const portfolioSingle = ({ data }) => {
         </div>
       
       </div>
-
         
       <div className="margin-y-4">
-
 
         <MDXProvider components={shortcodes}>
           <MDXRenderer>
