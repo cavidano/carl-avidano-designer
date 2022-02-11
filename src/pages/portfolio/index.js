@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import { Link, graphql } from 'gatsby';
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
 import Header from '../../components/Header.js';
 
 const Portfolio = ({ data }) => {
