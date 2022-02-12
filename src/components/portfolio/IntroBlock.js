@@ -3,9 +3,9 @@ import React from "react";
 const IntroBlock = ({ children }) => {
   return (
     <div className="container narrow margin-y-4">
-      <div className="h2 font-weight-bold">
+      <h2>
         {children}
-      </div>
+      </h2>
     </div>
   )
 }
