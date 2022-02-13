@@ -100,7 +100,7 @@ main {
     display: flex;
     justify-content: center;
 
-    padding: var(--spacer-2);
+    margin: var(--spacer-2);
 }
 
 .lightbox__container {
@@ -110,16 +110,15 @@ main {
     align-items: flex-start;
 
     overflow-y: scroll;
-    padding: var(--spacer-2);
 
-    span {
+    .gatsby-resp-image-wrapper {
         display: block;
         width: 100%;
 
-        box-shadow: 0 0 24px hsla(0, 0%, 0%, 0.25);
-    }
+        box-shadow: 0 0 24px hsla(0, 0%, 0%, 0.75);
 
-    span:hover{
-        cursor: zoom-out;
+        &:hover{
+            cursor: zoom-out;
+        }
     }
 }
