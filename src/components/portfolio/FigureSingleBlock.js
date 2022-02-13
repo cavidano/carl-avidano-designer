@@ -29,12 +29,9 @@ const FigureSingleBlock = ({ children, ...props }) => {
             <figure className="medium margin-y-5">
 
                 <div className="zoomable" onClick={handleOpen}>
-
-                {children}
-
+                    {children}
                 </div>
-
-            
+                
                 {caption != null && (
                     <figcaption className="container narrow font-size-md">
                         <p>
