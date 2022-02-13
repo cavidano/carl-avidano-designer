@@ -1,9 +1,23 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Font Weight Utilities
+// D. Font Size Utilities
+// E. Headers
+// F. Body Selectors
+// G. Text Align Utilities
+// H. Text Transform Utilities
+// I. Word Wrap Utilities
+// J. Truncate Text Utility
+
+*/
 
 //////////////////////////////////////////////
 // A. Modules
 //////////////////////////////////////////////
-
-@use "../modules/shadows/style" as shadows;
 
 .full-height-container, 
 main.home {
@@ -33,6 +47,10 @@ main {
     z-index: 10000;
 }
 
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
 .square {
     transition: transform 0.25s ease-in-out;
 
@@ -41,6 +59,10 @@ main {
         transform: scale(1.0375);
     }
 }
+
+//////////////////////////////////////////////
+// C. Lightbox
+//////////////////////////////////////////////
 
 [class*="lightbox"]{  
     width: 100%;
@@ -66,10 +88,10 @@ main {
 .lightbox__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    align-items: flex-start;
 
-    p {
+    span {
         width: 100%;
         display: block;
     }
