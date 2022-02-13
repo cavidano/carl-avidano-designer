@@ -75,11 +75,6 @@ main {
 }
 
 .lightbox {
-
-    --lb-opacity: initial;
-    --lb-offset: initial;
-    --lb-width: initial;
-
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -127,14 +122,4 @@ main {
         }
 
     }
-}
-
-.lightbox.shown .lightbox__container > .gatsby-resp-image-wrapper {
-
-    width: var(--lb-width);
-    transform: translateY(var(--lb-offset));
-
-    transition: width 0.5s linear,
-                transform  0.125s linear, 
-    
 }

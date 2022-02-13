@@ -6,62 +6,19 @@ import LightBox from './Lightbox';
 
 const FigureSingleBlock = ({ children, ...props }) => {
 
-    
     const { caption } = props;
 
     const lightboxID = uuidv4();
 
-    function getPosition(element) {
-        var xPosition = 0;
-        var yPosition = 0;
-    
-        while(element) {
-            xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
-            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-            element = element.offsetParent;
-        }
-    
-        return { x: xPosition, y: yPosition };
-    }
-
-    const handleOpen = (e) => {
+    const handleOpen = () => {
         const targetLightbox = document.getElementById(lightboxID);
-
-        
-        const winScrollY = window.scrollY;
-        const elOffset = e.target.closest('span').offsetTop;
-        const elWidth = e.target.offsetWidth;
-
-        const elDistance = elOffset - winScrollY;
-
-        console.log("my target is ======> ", e.target);
-        console.log("my width is ======> ", e.target.offsetWidth);
-        console.log("my height is ======> ", e.target.offsetHeight);
-        console.log("my ofsset is ======> ", elOffset);
-        console.log("the window scroll is ======> ", winScrollY);
-        console.log("my distance is ======> ", elDistance);
-
-        const lightboxContainer = targetLightbox.querySelector('.lightbox__container > span');
-
-        lightboxContainer.style.setProperty('--lb-width', elWidth + 'px');
-        lightboxContainer.style.setProperty('--lb-offset', elDistance + 'px');
-
 
         targetLightbox.classList.add('shown');
-
-        setTimeout(() => {
-            lightboxContainer.style.setProperty('--lb-width', '100%');
-            lightboxContainer.style.setProperty('--lb-offset', 'initial');
-        }, 10);
-
-
-        
-
-
     }
 
-    const handleClose = (e) => {
+    const handleClose = () => {
         const targetLightbox = document.getElementById(lightboxID);
+
         targetLightbox.classList.remove('shown');
     }
     
