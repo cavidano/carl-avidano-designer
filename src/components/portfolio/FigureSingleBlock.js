@@ -28,7 +28,7 @@ const FigureSingleBlock = ({ children, ...props }) => {
         <Fragment>
             <figure className="medium margin-y-5">
 
-                <div className='whoa' onClick={handleOpen}>
+                <div className="zoomable" onClick={handleOpen}>
 
                 {children}
 
