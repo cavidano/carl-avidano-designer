@@ -14,7 +14,7 @@ function LogoRedesign() {
                             placeholder="dominantColor"
                             layout="fullWidth"
                         />
-                        <figcaption class="container">
+                        <figcaption className="container">
                             <p>Old CCF Logo</p>
                         </figcaption>
                     </figure>
@@ -25,7 +25,7 @@ function LogoRedesign() {
                             placeholder="dominantColor"
                             layout="fullWidth"
                         />
-                        <figcaption class="container">
+                        <figcaption className="container">
                             <p>New CCF Logo</p>
                         </figcaption>
                     </figure>

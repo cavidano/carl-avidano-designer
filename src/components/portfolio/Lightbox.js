@@ -1,9 +1,13 @@
 import React from 'react';
 
-const LightBox = () => {
+const LightBox = ({children, handleClose, id}) => {
 	return (
-		<div>
-			
+		<div className="lightbox" id={id} onClick={handleClose}>
+			<div className="lightbox__container">
+
+				{children}
+
+			</div>
 		</div>
 	);
 };

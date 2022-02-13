@@ -5,7 +5,7 @@ const LiveProjectLink = (props) => {
   return (
     <div className="container narrow margin-y-4">
       <a
-        class="button button--outline text-color-link"
+        className="button button--outline text-color-link"
         href={linkURL ? linkURL : '#1'}
         target={linkURL ? '_blank' : '_self'}>
             See it Live

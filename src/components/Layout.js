@@ -97,9 +97,9 @@ const Layout = ({ children }) => {
 
         <div className="mode-toggle-button-container">
           <button
-            class="button theme-canvas button--icon-only"
+            className="button theme-canvas button--icon-only"
             onClick={handleThemeModeClick}>
-              <span class="icon icon-mode-light-dark" aria-hidden="true"></span>
+              <span className="icon icon-mode-light-dark" aria-hidden="true"></span>
           </button>
         </div>
         
