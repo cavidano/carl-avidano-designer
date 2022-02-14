@@ -10,8 +10,27 @@ const FigureSingleBlock = ({ children, ...props }) => {
 
     const lightboxID = uuidv4();
 
-    const handleOpen = () => {
+    //
+
+
+
+    const handleOpen = (e) => {
         const targetLightbox = document.getElementById(lightboxID);
+        
+        const lightboxContainer = targetLightbox.querySelector('.lightbox__container');
+        
+        const viewportHeight = window.innerHeight;
+
+        const targetHeight = e.target.offsetHeight; 
+
+        console.log('my viewport is = ', viewportHeight, targetHeight);
+
+        if(targetHeight < viewportHeight){
+
+        lightboxContainer.style.justifyContent = 'center';
+        }
+
+
 
         targetLightbox.classList.add('shown');
     }
