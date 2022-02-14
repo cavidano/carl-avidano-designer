@@ -13,7 +13,7 @@ const Portfolio = ({ data }) => {
   const myProjects = projects.map((project) => (
 
     <Link
-      class="backdrop aspect-ratio-1x1 theme-primary border-radius square"
+      class="backdrop aspect-ratio-1x1 theme-primary border-radius scale"
       to={`/portfolio/${project.slug}`}
       key={project.id}
       style={{

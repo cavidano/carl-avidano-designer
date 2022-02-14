@@ -192,40 +192,7 @@ body > footer:not([class*="theme-"]),
 }
 
 //////////////////////////////////////////////
-// D. Wayfinding 
-//////////////////////////////////////////////
-
-
-@each $name, $color-map in $theme-colors {
-    $swatch: map.get($color-map, "swatch");
-    $text: map.get($color-map, "text");
-    $border: map.get($color-map, "border");
-
-    [data-active-theme="#{$name}"] {
-
-        [aria-current],
-        [aria-current] + .nav__dropdown,
-        [aria-expanded="true"] {
-            --background-color: #{$swatch} !important;
-            --text-color: #{$text} !important;
-            --border-color: #{$border} !important;
-        }
-    }
-
-    [data-active-color="#{$name}"] {
-        
-        [aria-current],
-        [aria-expanded="true"] {
-            --text-color: #{$swatch};
-            color: var(--text-color) !important;
-        }
-
-    }
-
-}
-
-//////////////////////////////////////////////
-// D. Wayfinding 
+// D. Dark Mode 
 //////////////////////////////////////////////
 
 [data-mode="dark"]{
@@ -235,4 +202,8 @@ body > footer:not([class*="theme-"]),
     --canvas-link: #67a6ff;
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
+    
+    .lightbox {
+        --lightbox-overlay-color: black;
+    }
 }

@@ -10,10 +10,6 @@ const FigureSingleBlock = ({ children, ...props }) => {
 
     const lightboxID = uuidv4();
 
-    //
-
-
-
     const handleOpen = (e) => {
         const targetLightbox = document.getElementById(lightboxID);
         
@@ -23,22 +19,19 @@ const FigureSingleBlock = ({ children, ...props }) => {
 
         const targetHeight = e.target.offsetHeight; 
 
-        console.log('my viewport is = ', viewportHeight, targetHeight);
-
         if(targetHeight < viewportHeight){
-
-        lightboxContainer.style.justifyContent = 'center';
+            lightboxContainer.style.setProperty('--lightbox-vertical-align', 'center');
         }
 
-
-
         targetLightbox.classList.add('shown');
+        document.querySelector('body').classList.add('modal-open');
     }
 
     const handleClose = () => {
         const targetLightbox = document.getElementById(lightboxID);
 
         targetLightbox.classList.remove('shown');
+        document.querySelector('body').classList.remove('modal-open');
     }
         
     return (
