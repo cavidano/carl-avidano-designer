@@ -18,9 +18,9 @@ const Resume = ({ data }) => {
         let description = job.description
 
         return (
-            <div className="padding-y-3">
+            <div className="padding-y-3" key={`${job}_${index}`}>
                 
-                <div key={`${job}_${index}`} className="grid justify-content-end grid--column-4--lg gap-3">
+                <div className="grid justify-content-end grid--column-4--lg gap-3">
 
                     {index === 0 ? (
 

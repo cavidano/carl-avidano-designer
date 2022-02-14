@@ -51,7 +51,6 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
 
-    new Accessibility();
     new Accordion();
     new Alerts();
     new Buttons();
@@ -64,6 +63,12 @@ const Layout = ({ children }) => {
     new Tables();
 
   }, []);
+
+  useEffect(() => {
+
+    new Accessibility();
+
+  });
 
   const handleThemeModeClick = () => {
     if(themeMode === 'light') {
