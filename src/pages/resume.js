@@ -18,11 +18,21 @@ const Resume = ({ data }) => {
         let description = job.description
 
         return (
-            <div className="border-top padding-y-3">
+            <div className="padding-y-3">
                 
-                <div key={`${job}_${index}`} className="grid grid--column-8--lg gap-3">
+                <div key={`${job}_${index}`} className="grid justify-content-end grid--column-4--lg gap-3">
 
-                    <div className="grid__colspan-3">
+                    {index === 0 ? (
+
+                    <h2 className="h6 grid__colspan-1--lg">
+                        Employment
+                    </h2>
+
+                    ) : (
+                        <span className='grid__colspan-1--lg'></span>
+                    )}
+
+                    <div className="grid__colspan-1--lg font-size-md">
                         <p className="margin-bottom-2">
                             <strong className="display-block">
                                 {company}
@@ -38,14 +48,13 @@ const Resume = ({ data }) => {
 
                     </div>
 
-                    <div className="grid__colspan-5">
+                    <div className="grid__colspan-2--lg">
 
                     <MDXRenderer>
                         {description.body}
                     </MDXRenderer> 
 
                     </div>
-
 
                 </div>
             
@@ -55,15 +64,118 @@ const Resume = ({ data }) => {
     
     return (
         <Fragment>
+
             <Header />
 
-            <div className="container narrow medium--lg padding-y-3">
+            <main className="container narrow medium--lg overflow-hidden margin-y-4">
 
-                <h2 className="h6 text-transform-uppercase">Employment</h2>
+                <section className="border-top padding-y-2">
 
-                {jobList}
+                    {jobList}
 
-            </div>
+                </section>
+                
+                <section className="border-top padding-y-3">
+
+                    <div className="grid grid--column-4--lg gap-3">
+
+                        <h2 className="h6 grid__colspan-1--lg">
+                            Education
+                        </h2>
+
+                        <div className="grid__colspan-1--lg font-size-md">
+                            <p className="margin-bottom-2">
+                                <strong className="display-block">
+                                    The Creative Center
+                                </strong>
+                                <span className="display-block font-size-md">
+                                    College of Art and Design
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <div className="grid__colspan-2">
+
+                            <p>
+                                Graduated with an Associate of Occupational Studies Degree in Graphic Design and Illustration.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section className="border-top padding-y-3">
+
+                    <div className="grid grid--column-4--lg gap-3">
+
+                        <h2 className="h6 grid__colspan-1--lg">
+                            Skills
+                        </h2>
+                        
+                        <div className="grid__colspan-1 font-size-md">
+
+                            <ul>
+                                <li>
+                                    Content Strategy
+                                </li>
+                                <li>
+                                    UX/Interaction Design
+                                </li>
+                                <li>
+                                    Front-end Development
+                                </li>
+                                <li>
+                                    Design Systems
+                                </li>
+                            </ul>
+                            
+                        </div>
+
+                        <div className="grid__colspan-1 font-size-md">
+
+                            <ul>
+                                <li>
+                                    Branding/Identity Design
+                                </li>
+                                <li>
+                                    Graphic Design
+                                </li>
+                                <li>
+                                    Typography
+                                </li>
+                                <li>
+                                    Illustration/Fine Art
+                                </li>
+                            </ul>
+                            
+                        </div>
+
+                        <div className="grid__colspan-1 font-size-md">
+
+                            <ul>
+                                <li>
+                                    Communication/Writing  
+                                </li>
+                                <li>
+                                    Teaching and Mentoring
+                                </li>
+                                <li>
+                                    Agile Methodology
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
         </Fragment>
     );
 }

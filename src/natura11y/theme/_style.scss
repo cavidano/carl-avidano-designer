@@ -64,8 +64,13 @@ main {
 // C. Lightbox
 //////////////////////////////////////////////
 
+.zoomable{
+    transition: opacity 0.25s linear;
+}
+
 .zoomable:hover {
     cursor: zoom-in;
+    opacity: 0.8;
 }
 .lightbox,
 .lightbox__container{  
@@ -100,7 +105,7 @@ main {
     display: flex;
     justify-content: center;
 
-    margin: var(--spacer-2);
+    margin: var(--spacer-3);
 }
 
 .lightbox__container {

@@ -66,7 +66,7 @@ In this file:
     // Banner Headline
 
     --banner-headline-font-size: calc(var(--body-font-size) * 2.75);
-    --banner-headline-font-weight: var(--body-font-weight-normal);
+    --banner-headline-font-weight: var(--body-font-weight-bold);
 
     // Paragraph
 
@@ -81,7 +81,6 @@ In this file:
     }
 }
 
-
 //////////////////////////////////////////////
 // C. Font Weight Utilities
 //////////////////////////////////////////////
@@ -94,7 +93,7 @@ $font-weights: (
 
 @each $key, $value in $font-weights {
     .font-weight-#{$key} {
-        font-weight: #{$value};
+        font-weight: #{$value} !important;
     }
 }
 

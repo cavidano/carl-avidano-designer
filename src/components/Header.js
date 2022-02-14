@@ -5,7 +5,8 @@ import { Link } from 'gatsby';
 const Header = () => {
 
   const activeStyle = {
-    'fontWeight': 'var(--body-font-weight-bold)'
+    'fontWeight': 'var(--body-font-weight-bold)',
+    'text-decoration': 'underline'
   }
 
   return (

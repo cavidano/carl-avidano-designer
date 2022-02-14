@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
+import Footer from './Footer';
+
 import { Helmet } from 'react-helmet';
 
 import '../icons/natura11y-icons.css';
@@ -104,6 +106,8 @@ const Layout = ({ children }) => {
         </div>
         
         {children}
+
+        <Footer />
 
       </div>
 

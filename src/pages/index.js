@@ -1,8 +1,6 @@
-import React, {Fragment, useEffect } from 'react';
+import React, {Fragment } from 'react';
 
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
 
 import Header from '../components/Header.js';
 
@@ -16,13 +14,14 @@ const Home = () => {
             
         <section className="container medium align-self-center text-align-center">
 
-          <h1 className="banner-headline">
+          <h1 className="banner-headline font-weight-bold margin-bottom-4">
             I seek to inspire empathy and inclusion through accessible experience and interaction design.
           </h1>
 
-          <a class="button button--outline margin-y-4" href="#1">
-            See my work
-          </a>
+          <Link class="button button--outline button--has-icon" to="/portfolio">
+              <span class="button__text">See my work</span>
+              <span class="icon icon-arrow-right"></span>
+          </Link>
 
         </section>
 
