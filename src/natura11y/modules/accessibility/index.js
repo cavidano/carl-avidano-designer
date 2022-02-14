@@ -15,7 +15,6 @@ import "./_style.scss"
 //       '[data-toggle="accordion"]',
 //     ];
 
-
 //     const focusableElementList = document.querySelectorAll(elements);
 
 //     focusableElementList.forEach((focusableElement) => {
@@ -41,5 +40,4 @@ import "./_style.scss"
 
 //   }
   
-
 // }
