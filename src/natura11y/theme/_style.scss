@@ -24,8 +24,10 @@ In this file:
     --lightbox-z-index: 20000;
 }
 
-#global-header nav ul li {
-    width: 50%;
+#global-header {
+    nav > ul > li {
+        width: 50%;
+    }
 }
 
 //////////////////////////////////////////////
