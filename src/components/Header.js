@@ -19,7 +19,7 @@ const Header = () => {
 
         <nav className="display-flex justify-content-center">
 
-            <ul className="nav nav--divider nav--horizontal border border-radius font-size-md text-transform-uppercase">
+            <ul className="nav nav--divider nav--horizontal border border-radius font-size-sm text-transform-uppercase">
                 <li>
                     <Link
                         to="/portfolio"
