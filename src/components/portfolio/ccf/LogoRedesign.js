@@ -15,7 +15,7 @@ function LogoRedesign() {
                             layout="fullWidth"
                         />
                         <figcaption className="container">
-                            <p>Old CCF Logo</p>
+                            <p>Old CCF logo</p>
                         </figcaption>
                     </figure>
                     <figure>
@@ -26,7 +26,7 @@ function LogoRedesign() {
                             layout="fullWidth"
                         />
                         <figcaption className="container">
-                            <p>New CCF Logo</p>
+                            <p>New CCF logo</p>
                         </figcaption>
                     </figure>
                 </div>
