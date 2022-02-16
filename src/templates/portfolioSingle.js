@@ -33,7 +33,7 @@ const portfolioSingle = ({ data }) => {
   return (
     <Fragment>
 
-      <div className="project-intro theme-primary"
+      <div className="theme-primary"
         style={{
             '--primary': `${backgroundColor}`,
             '--primary-text': `${textColor}`,

@@ -2,8 +2,6 @@ import React, { Fragment, useEffect, useState } from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Footer from './Footer';
-
 import { Helmet } from 'react-helmet';
 
 import '../icons/natura11y-icons.css';
@@ -94,7 +92,7 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <div className='theme-canvas full-height-container' data-mode={themeMode}>
+      <div className="theme-canvas" data-mode={themeMode}>
 
         <div className="mode-toggle-button-container">
           <button
@@ -105,8 +103,6 @@ const Layout = ({ children }) => {
         </div>
         
         {children}
-
-        <Footer />
 
       </div>
 

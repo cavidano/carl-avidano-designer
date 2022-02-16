@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../../components/Header.js';
+import Footer from '../../components/Footer';
 
 const Portfolio = ({ data }) => {
 
@@ -62,6 +63,8 @@ const Portfolio = ({ data }) => {
         </section>
 
       </main>
+
+      <Footer />
 
     </Fragment>
     

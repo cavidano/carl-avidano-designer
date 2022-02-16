@@ -34,23 +34,6 @@ In this file:
 // B. Home Containers
 //////////////////////////////////////////////
 
-.full-height-container, 
-main.home {
-    display: flex;
-}
-
-.full-height-container {
-    min-height: 100vh;
-
-    flex-direction: column;
-}
-
-main {
-    &.home {
-        flex-grow: 1;
-    }
-}
-
 .mode-toggle-button-container {
     position: fixed;
 

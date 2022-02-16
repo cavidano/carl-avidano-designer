@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
 
 const Resume = ({ data }) => {
 
@@ -174,6 +175,8 @@ const Resume = ({ data }) => {
                 </section>
 
             </main>
+
+            <Footer />
 
 
         </Fragment>
