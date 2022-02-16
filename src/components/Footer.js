@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="container theme-primary padding-y-2">
+    <footer className="container padding-y-2">
 
         <div className="text-align-center font-size-sm">
             <p>
@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         
     </footer>
-  )
+  );
 }
 
 export default Footer;

@@ -7,6 +7,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+
 import TextBlock from '../components/portfolio/TextBlock.js';
 import IntroBlock from '../components/portfolio/IntroBlock.js';
 import LiveProjectLink from '../components/portfolio/LiveProjectLink.js';
@@ -40,8 +42,8 @@ const portfolioSingle = ({ data }) => {
         }}>
       
         <Header />
-      
-        <main className="container medium text-align-center">
+  
+        <div className="container medium text-align-center">
 
           <h1 class="banner-headline font-weight-normal margin-y-4">{title}</h1>
 
@@ -50,11 +52,11 @@ const portfolioSingle = ({ data }) => {
               alt=""
             />
 
-        </main>
+        </div>
       
       </div>
         
-      <div className="margin-y-4">
+      <article className="margin-y-4">
 
         <MDXProvider components={shortcodes}>
           <MDXRenderer>
@@ -62,8 +64,10 @@ const portfolioSingle = ({ data }) => {
           </MDXRenderer>
         </MDXProvider>
 
-      </div>
-    
+      </article>
+
+      <Footer />
+      
     </Fragment>
   );
 }
