@@ -11,11 +11,11 @@ const About = () => {
   return (
     <Fragment>
 
-        <div class="backdrop backdrop--fixed justify-content-start theme-dark height-100vh">
+        <div class="backdrop backdrop--fixed justify-content-start theme-dark min-height-100vh">
 
             <div class="backdrop__image gradient-veneer-top margin-x-auto">
                 <StaticImage
-                    className="opacity-30"
+                    className="opacity-10"
                     src="../images/self-square.jpg"
                     alt=""
                 />
@@ -48,16 +48,22 @@ const About = () => {
 
                             <section class="padding-y-3">
 
-                                <h2 class="font-weight-normal">
-                                Me, at a glance
+                                <h2>
+                                    I believe accessibility is part and parcel of an effective design process.
                                 </h2>
 
                                 <p>
-                                    I am an interaction designer and front-end engineer. I started my professional journey back when people could smoke in the office.  lies primarily in creating and implementing designs for large-scale CMS and e-commerce websites with complex product catalogs and content features.
+                                I'm still learning about what it takes to be digitally accessible. There's so much to learn! Rest assured that whatever I work on for you, I'll do my best to make it as accessible as possible.
                                 </p>
 
+                                <h3>
+
+                                Background at a glance
+
+                                </h3>
+
                                 <p>
-                                    When I'm at home and not on the computer, I'm drawing or painting.
+                                    I have two decades of professional digital design experience. My career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2011, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
                                 </p>
 
                             </section>
