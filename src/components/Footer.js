@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="container padding-y-2">
 
-        <div className="text-align-center font-size-sm">
+    <div className="text-align-center font-size-sm">
             <p>
-                © Copyright <span className="copyright-year"></span> - Carl Avidano.<br />All rights reserved.
+                © <span className="copyright-year"></span> - Carl Avidano. All rights reserved.
             </p>
         </div>
         
