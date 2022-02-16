@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import '../icons/natura11y-icons.css';
 
+import '../natura11y/modules/accessibility';
 import '../natura11y/modules/accents';
 import '../natura11y/modules/article';
 import '../natura11y/modules/aspect-ratios';
@@ -29,7 +30,6 @@ import '../natura11y/modules/spacing';
 import '../natura11y/modules/typography';
 import '../natura11y/modules/z-index/index';
 
-import Accessibility from '../natura11y/modules/accessibility';
 import Accordion from '../natura11y/modules/accordion';
 import Alerts from '../natura11y/modules/alerts';
 import Buttons from '../natura11y/modules/buttons';
