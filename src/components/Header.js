@@ -36,6 +36,14 @@ const Header = () => {
                             Resume
                     </Link>
                 </li>
+                <li>
+                    <Link to="#1"
+                        to="/about"
+                        activeStyle={activeStyle}
+                        partiallyActive={true}>
+                            About
+                    </Link>
+                </li>
             </ul>
 
         </nav>

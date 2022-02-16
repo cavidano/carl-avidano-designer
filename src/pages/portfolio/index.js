@@ -68,7 +68,7 @@ const Portfolio = ({ data }) => {
 
     </Fragment>
     
-  )
+  );
 }
 
 export default Portfolio;

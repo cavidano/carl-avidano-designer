@@ -68,9 +68,9 @@ const Resume = ({ data }) => {
 
             <Header />
 
-            <main className="container narrow medium--lg overflow-hidden margin-y-4">
+            <main className="container narrow medium--lg margin-y-4">
 
-                <section className="border-top padding-y-2">
+                <section className="border-top">
 
                     {jobList}
 
@@ -177,7 +177,6 @@ const Resume = ({ data }) => {
             </main>
 
             <Footer />
-
 
         </Fragment>
     );
