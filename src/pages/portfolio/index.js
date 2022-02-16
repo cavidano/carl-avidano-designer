@@ -14,7 +14,7 @@ const Portfolio = ({ data }) => {
   const myProjects = projects.map((project, index) => (
 
     <Link
-      className="backdrop aspect-ratio-1x1 theme-primary border-radius scale"
+      className="backdrop theme-primary aspect-ratio-1x1 border-radius overflow-hidden scale"
       to={`/portfolio/${project.slug}`}
       key={`${project.id}_${index}`}
       style={{
