@@ -48,7 +48,7 @@ const Portfolio = ({ data }) => {
 
       <Header />
 
-      <main className="height-100 padding-3" id="skip-header-target">
+      <main className="height-100" id="skip-header-target">
 
         <section className="container narrow medium">
 
