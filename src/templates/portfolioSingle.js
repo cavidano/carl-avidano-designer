@@ -66,7 +66,7 @@ const portfolioSingle = ({ data }) => {
 
       </article>
 
-      <Footer />
+      <Footer backToTop={true} />
       
     </Fragment>
   );

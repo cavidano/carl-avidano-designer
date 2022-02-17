@@ -63,8 +63,8 @@ const Portfolio = ({ data }) => {
         </section>
 
       </main>
-
-      <Footer />
+      
+      <Footer backToTop={true} />
 
     </Fragment>
     

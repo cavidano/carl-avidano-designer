@@ -1,27 +1,31 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = (props) => {
+
+  const { backToTop } = props;
+  
   return (
-    <footer className="container narrow font-size-sm overflow-hidden">
+    <footer className="container narrow font-size-sm text-align-center overflow-hidden">
 
-        <ul class="nav nav--horizontal justify-content-center">
-            <li>
-                <a href="#1">Portfolio</a>
-            </li>
-            <li>
-                <a href="#1">Resume</a>
-            </li>
-            <li>
-                <a href="#1">About</a>
-            </li>
-        </ul>
+      {backToTop && (
 
-        <p className='padding-1 border-radius text-align-center margin-y-2'>
-          &#169; 2022 - Carl Avidano. All Rights Reserved.
-        </p>
+      <a class="button button--has-icon" href="#" data-scroll="top">
+          <span class="icon icon-double-chevron-up"></span>
+          <span class="button__text">Back to top</span>
+      </a>
+   
+      )}
+  
+      <p className='padding-1 border-radius margin-y-2'>
+        &#169; 2022 - Carl Avidano. All Rights Reserved.
+      </p>
 
     </footer>
   );
+}
+
+Footer.defaultProps = {
+  backToTop: false
 }
 
 export default Footer;
