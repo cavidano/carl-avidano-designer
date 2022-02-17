@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Helmet } from 'react-helmet';
 
+import Footer from './Footer';
+
 import '../icons/natura11y-icons.css';
 
 import '../natura11y/modules/accessibility';
@@ -101,8 +103,10 @@ const Layout = ({ children }) => {
               <span className="icon icon-mode-light-dark" aria-hidden="true"></span>
           </button>
         </div>
-        
+
         {children}
+
+        <Footer />
 
       </div>
 
