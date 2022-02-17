@@ -59,7 +59,7 @@ const About = () => {
                                 </h3>
 
                                 <p>
-                                    I have two decades of professional digital design experience. My career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2011, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
+                                    I have two decades of professional digital design experience. My career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2010, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
                                 </p>
 
                             </section>
