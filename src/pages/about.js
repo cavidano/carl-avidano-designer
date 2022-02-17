@@ -11,7 +11,7 @@ const About = () => {
 
         <div class="backdrop backdrop--fixed min-height-100vh">
 
-            <div class="backdrop__image gradient-veneer-right margin-x-auto">
+            <div class="backdrop__image">
                 <StaticImage
                     className="opacity-20"
                     src="../images/self-square.jpg"
@@ -19,7 +19,7 @@ const About = () => {
                 />
             </div>
 
-            <div class="backdrop__cover flex-column height-100vh">
+            <div class="backdrop__cover flex-column min-height-100vh">
 
                 <Header />
 

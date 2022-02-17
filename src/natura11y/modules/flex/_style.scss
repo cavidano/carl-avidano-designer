@@ -31,7 +31,7 @@ In this file:
 [class*="flex-row-reverse"],
 [class*="flex-column-reverse"] {
     display: flex !important;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     width: 100%;
 }
