@@ -7,8 +7,8 @@ const LightBox = ({children, handleClose, id}) => {
 
 			<div className="lightbox__actions font-size-md">
 
-				<a class="button button--icon-only" href="#1" aria-label="Home">
-					<span class="icon icon-close" aria-hidden="true"></span>
+				<a className="button button--icon-only" href="#1" aria-label="Home">
+					<span className="icon icon-close" aria-hidden="true"></span>
 				</a>
 
 			</div>

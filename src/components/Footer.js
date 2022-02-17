@@ -9,9 +9,9 @@ const Footer = (props) => {
 
       {backToTop && (
 
-      <a class="button button--has-icon" href="#" data-scroll="top">
-          <span class="icon icon-double-chevron-up"></span>
-          <span class="button__text">Back to top</span>
+      <a className="button button--has-icon" href="#" data-scroll="top">
+          <span className="icon icon-double-chevron-up"></span>
+          <span className="button__text">Back to top</span>
       </a>
    
       )}
