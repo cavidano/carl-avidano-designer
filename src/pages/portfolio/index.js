@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../../components/Header.js';
+import Footer from '../../components/Footer.js';
 
 const Portfolio = ({ data }) => {
 
@@ -47,7 +48,7 @@ const Portfolio = ({ data }) => {
 
       <Header />
 
-      <main className="height-100" id="skip-header-target">
+      <main className="min-height-100" id="skip-header-target">
 
         <section className="container narrow medium">
 
@@ -62,6 +63,8 @@ const Portfolio = ({ data }) => {
         </section>
 
       </main>
+
+      <Footer />
 
     </Fragment>
     

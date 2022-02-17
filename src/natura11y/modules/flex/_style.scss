@@ -30,7 +30,7 @@ In this file:
 [class*="flex-column"],
 [class*="flex-row-reverse"],
 [class*="flex-column-reverse"] {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
 
     width: 100%;

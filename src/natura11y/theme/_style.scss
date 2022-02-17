@@ -45,14 +45,6 @@ In this file:
     z-index: 10000;
 }
 
-.copyright-container {
-    position: fixed;
-    margin: var(--spacer-2);
-
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    
-}
 //////////////////////////////////////////////
 // C. Scale on Hover Focus
 //////////////////////////////////////////////
@@ -102,11 +94,9 @@ In this file:
     inset-block-start: 0;
     inset-inline-start: 0;
 
-
     display: none;
     
     z-index: 25000;
-
 
     &::before {
         content: "";

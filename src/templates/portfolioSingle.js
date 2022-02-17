@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
 
 import TextBlock from '../components/portfolio/TextBlock.js';
 import IntroBlock from '../components/portfolio/IntroBlock.js';
@@ -64,6 +65,8 @@ const portfolioSingle = ({ data }) => {
         </MDXProvider>
 
       </article>
+
+      <Footer />
       
     </Fragment>
   );

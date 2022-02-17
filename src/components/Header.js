@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <header className="container padding-y-4 text-align-center" id="global-header">
+    <header className="container padding-y-4 width-100 text-align-center" id="global-header">
 
         <Link className="display-inline-block margin-bottom-3" to="/">
             <p className='h5 margin-bottom-0'>Carl Avidano</p>

@@ -3,12 +3,13 @@ import React, {Fragment } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
 
 const About = () => {
   return (
     <Fragment>
 
-        <div class="backdrop backdrop--fixed justify-content-start theme-dark min-height-100vh">
+        <div class="backdrop backdrop--fixed min-height-100vh">
 
             <div class="backdrop__image gradient-veneer-right margin-x-auto">
                 <StaticImage
@@ -18,11 +19,11 @@ const About = () => {
                 />
             </div>
 
-            <div class="backdrop__cover">
+            <div class="backdrop__cover flex-column height-100vh">
 
                 <Header />
 
-                <div class="container narrow medium--lg margin-y-4">
+                <div class="container narrow medium--lg flex-grow-1">
 
                     <div class="border-top">
 
@@ -68,7 +69,9 @@ const About = () => {
                     </div>
                     
                 </div>
-
+                
+                <Footer />
+            
             </div>
 
         </div>

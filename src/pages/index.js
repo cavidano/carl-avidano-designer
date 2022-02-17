@@ -13,7 +13,10 @@ const Home = () => {
 
         <Header />
 
-        <main className="display-flex flex-grow-1" id="skip-header-target">
+        <main
+          className="display-flex flex-grow-1"
+          id="skip-header-target"
+          style={{'minHeight': '400px'}}>
               
           <section className="container medium align-self-center text-align-center">
 
@@ -30,9 +33,13 @@ const Home = () => {
 
         </main>
 
-      </div>
+        <div className="width-100">
 
-      <Footer />
+          <Footer />
+
+        </div>
+
+      </div>
 
     </Fragment>
   );

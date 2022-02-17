@@ -12,7 +12,7 @@ export default class Document {
         // Copyright Year
         ///////////////////////
 
-        const copyrightYear = document.querySelector('.copyright-year');
+        const copyrightYear = document.getElementById('copyright-year');
 
         if (copyrightYear) {
             const currentYear = new Date().getFullYear();

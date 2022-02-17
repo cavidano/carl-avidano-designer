@@ -4,8 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Helmet } from 'react-helmet';
 
-import Footer from './Footer';
-
 import '../icons/natura11y-icons.css';
 
 import '../natura11y/modules/accessibility';
