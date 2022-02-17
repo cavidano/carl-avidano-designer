@@ -9,7 +9,7 @@ const LiveProjectLink = (props) => {
         href={linkURL ? linkURL : '#1'}
         target={linkURL ? '_blank' : '_self'}>
             <span className="button__text">See it live</span>
-            <span class="icon icon-arrow-right"></span>
+            <span className="icon icon-arrow-right"></span>
         </a>
     </div>
   )

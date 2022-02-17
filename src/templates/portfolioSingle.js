@@ -45,7 +45,7 @@ const portfolioSingle = ({ data }) => {
   
         <div className="container medium text-align-center">
 
-          <h1 class="banner-headline font-weight-normal margin-y-4">{title}</h1>
+          <h1 className="banner-headline font-weight-normal margin-y-4">{title}</h1>
 
             <GatsbyImage
               image={marqueeImage}

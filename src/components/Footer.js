@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'gatsby';
+
 const Footer = (props) => {
 
   const { backToTop } = props;
@@ -9,10 +11,12 @@ const Footer = (props) => {
 
       {backToTop && (
 
-      <a className="button button--has-icon" href="#" data-scroll="top">
+      <Link
+        className="button button--has-icon"
+        to="#top-of-page" data-scroll="top">
           <span className="icon icon-double-chevron-up"></span>
           <span className="button__text">Back to top</span>
-      </a>
+      </Link>
    
       )}
   

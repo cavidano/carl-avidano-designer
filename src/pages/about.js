@@ -9,9 +9,9 @@ const About = () => {
   return (
     <Fragment>
 
-        <div class="backdrop backdrop--fixed min-height-100vh">
+        <div className="backdrop backdrop--fixed min-height-100vh">
 
-            <div class="backdrop__image">
+            <div className="backdrop__image">
                 <StaticImage
                     className="opacity-20"
                     src="../images/self-square.jpg"
@@ -19,17 +19,17 @@ const About = () => {
                 />
             </div>
 
-            <div class="backdrop__cover flex-column min-height-100vh">
+            <div className="backdrop__cover flex-column min-height-100vh">
 
                 <Header />
 
-                <div class="container narrow medium--lg flex-grow-1">
+                <div className="container narrow medium--lg flex-grow-1">
 
-                    <div class="border-top">
+                    <div className="border-top">
 
-                        <div class="grid grid--column-2--lg gap-3">
+                        <div className="grid grid--column-2--lg gap-3">
 
-                            <section class="padding-y-3">
+                            <section className="padding-y-3">
 
                                 <p className="margin-bottom-1">
                                     <strong>
@@ -44,7 +44,7 @@ const About = () => {
 
                             </section>
 
-                            <section class="padding-y-3">
+                            <section className="padding-y-3">
 
                                 <h2>
                                     Accessibility is part and parcel of effective design.

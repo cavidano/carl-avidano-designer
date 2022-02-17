@@ -24,9 +24,9 @@ const Home = () => {
               I seek to inspire empathy and inclusion through accessible experience and interaction design.
             </h1>
 
-            <Link class="button button--outline button--has-icon" to="/portfolio">
-                <span class="button__text">See my work</span>
-                <span class="icon icon-arrow-right"></span>
+            <Link className="button button--outline button--has-icon" to="/portfolio">
+                <span className="button__text">See my work</span>
+                <span className="icon icon-arrow-right"></span>
             </Link>
 
           </section>

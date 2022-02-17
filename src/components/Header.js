@@ -29,7 +29,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="#1"
+                    <Link
                         to="/resume"
                         activeStyle={activeStyle}
                         partiallyActive={true}>
@@ -37,7 +37,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="#1"
+                    <Link
                         to="/about"
                         activeStyle={activeStyle}
                         partiallyActive={true}>

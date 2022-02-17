@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 
-      <div className="theme-canvas" data-mode={themeMode}>
+      <div className="theme-canvas" data-mode={themeMode} id="top-of-page">
 
         <div className="mode-toggle-button-container">
           <button
