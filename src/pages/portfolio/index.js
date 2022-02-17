@@ -53,7 +53,7 @@ const Portfolio = ({ data }) => {
 
           <h1 className="screen-reader-only">Select Projects</h1>
 
-          <div className="grid grid--column-2--md grid--column-3--lg gap-3 margin-y-4">
+          <div className="grid grid--column-2--md grid--column-3--lg gap-3 padding-y-4">
 
           {myProjects}
                 
