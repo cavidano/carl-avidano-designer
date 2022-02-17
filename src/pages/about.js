@@ -1,7 +1,5 @@
 import React, {Fragment } from 'react';
 
-import { Link } from 'gatsby';
-
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
@@ -13,9 +11,9 @@ const About = () => {
 
         <div class="backdrop backdrop--fixed justify-content-start theme-dark min-height-100vh">
 
-            <div class="backdrop__image gradient-veneer-top margin-x-auto">
+            <div class="backdrop__image gradient-veneer-right margin-x-auto">
                 <StaticImage
-                    className="opacity-30"
+                    className="opacity-20"
                     src="../images/self-square.jpg"
                     alt=""
                 />
@@ -49,11 +47,11 @@ const About = () => {
                             <section class="padding-y-3">
 
                                 <h2>
-                                    I believe accessibility is part and parcel of an effective design process.
+                                    Accessibility is part and parcel of effective design.
                                 </h2>
 
                                 <p>
-                                I'm still learning about what it takes to be digitally accessible. There's so much to learn! Rest assured that whatever I work on for you, I'll do my best to make it as accessible as possible.
+                                    I'm still learning about what it takes to be digitally accessible. There's so much to learn! Rest assured that whatever I work on for you, I'll do my best to make it as accessible as possible.
                                 </p>
 
                                 <h3>
