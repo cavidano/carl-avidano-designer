@@ -60,9 +60,9 @@ In this file:
     left: 0;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    align-items: end;
+    place-items: end start;
 }
 
 .backdrop__credit {
