@@ -13,9 +13,9 @@ const About = () => {
 
             <div className="backdrop__image">
                 <StaticImage
-                    className="opacity-20"
+                    className="opacity-20 display-none display-block--lg"
                     src="../images/self-square.jpg"
-                    alt=""
+                    alt="Carl Avidano"
                 />
             </div>
 
@@ -23,7 +23,7 @@ const About = () => {
 
                 <Header />
 
-                <div className="container narrow medium--lg flex-grow-1">
+                <div className="container narrow medium--lg flex-grow-1 padding-y-4">
 
                     <div className="border-top">
 
@@ -46,20 +46,20 @@ const About = () => {
 
                             <section className="padding-y-3">
 
-                                <h2>
-                                    Accessibility is part and parcel of effective design.
-                                </h2>
+                                <div className="margin-x-n3 display-none">
+                                    <StaticImage
+                                        className="opacity-20"
+                                        src="../images/self-square.jpg"
+                                        alt="Carl Avidano"
+                                    />
+                                </div>
+
+                                <h1>
+                                    At a glance
+                                </h1>
 
                                 <p>
-                                    I'm still learning about what it takes to be digitally accessible. There's so much to learn! Rest assured that whatever I work on for you, I'll do my best to make it as accessible as possible.
-                                </p>
-
-                                <h3>
-                                    Background at a glance
-                                </h3>
-
-                                <p>
-                                    I have two decades of professional digital design experience. My career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2010, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
+                                    I am a Senior user experience designer living in New York. With two decades of professional design experience, my career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2010, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
                                 </p>
 
                             </section>
