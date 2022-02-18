@@ -13,7 +13,7 @@ const About = () => {
 
             <div className="backdrop__image">
                 <StaticImage
-                    className="opacity-20 display-none display-block--lg"
+                    className="opacity-10 display-none display-block--lg"
                     src="../images/self-square.jpg"
                     alt="Carl Avidano"
                 />
@@ -29,37 +29,51 @@ const About = () => {
 
                         <div className="grid grid--column-2--lg gap-3">
 
-                            <section className="padding-y-3">
+                            <section className="padding-y-3--lg">
 
-                                <p className="margin-bottom-1">
-                                    <strong>
-                                        New York City
-                                    </strong> 
-                                </p>
+                                <div className="flex-row align-items-center">
 
-                                <p className="font-size-md">
-                                    <span className="display-block">(718) 737-8545</span>
-                                    <a href="#!">cavidano@gmail.com</a>  
-                                </p> 
+                                    <div className="border-radius-circle margin-top-3 margin-right-3 display-none--lg" style={{'max-width': '160px'}}>
+                                        <StaticImage
+                                            className="opacity-80"
+                                            src="../images/self-square.jpg"
+                                            alt="Carl Avidano"
+                                        />
+                                    </div>
+
+                                    <div className="contact">
+
+                                        <p className="margin-bottom-1">
+                                            <strong>
+                                                New York City
+                                            </strong> 
+                                        </p>
+
+                                        <p className="font-size-md">
+                                            <span className="display-block">(718) 737-8545</span>
+                                            <a href="#!">cavidano@gmail.com</a>  
+                                        </p> 
+                                    </div>
+                                
+                                </div>
 
                             </section>
 
-                            <section className="padding-y-3">
-
-                                <div className="margin-x-n3 display-none">
-                                    <StaticImage
-                                        className="opacity-20"
-                                        src="../images/self-square.jpg"
-                                        alt="Carl Avidano"
-                                    />
-                                </div>
+                            <section className="padding-y-3--lg">
 
                                 <h1>
-                                    At a glance
+                                    I'm a seasoned interaction designer.
                                 </h1>
 
                                 <p>
-                                    I am a Senior user experience designer living in New York. With two decades of professional design experience, my career began at an advertising agency in Nebraska in 2001. Sometime after moving to New York in 2010, I leaped into working independently. For seven years, I worked exclusively with social impact organizations. Most recently, I've been working for the city of New York's tech office. 
+                                    I've been doing design for a long time. Lucky for me, there's always something new and interesting to learn.
+                                </p>
+
+                                <p>
+                                    My design journey began in 2001 at a well-known Nebraska advertising agency. I moved to New York in 2010, to work for a small firm in Manhattan. Not long after, I decided to work independently (something I have always wanted to try).
+                                </p>
+                                <p>
+                                    I worked only with social impact organizations for more than seven years. My most recent experience is with New York City government, where I developed my passion for improving digital accessibility and inclusion. 
                                 </p>
 
                             </section>
