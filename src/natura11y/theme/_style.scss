@@ -2,36 +2,41 @@
 
 In this file:
 
-// A. Variables
-// B. Home Containers
-// C. Scale on Hover Focus
-// D. Lightbox
+// A. Modules
+// B. Variables
+// C. Theme Mode Container
+// D. Scale on Hover Focus
+// E. Lightbox
+// F. Mobile sizes
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
 //////////////////////////////////////////////
 
-// Scoped to Block
+@use "../modules/breakpoints/style" as breakpoints;
 
-%lightbox-vars {
-    --lightbox-vertical-align: flex-start;
-
-    --lightbox-overlay-color: white;
-    --lightbox-overlay-opacity: 0.9;
-
-    --lightbox-z-index: 20000;
-}
+//////////////////////////////////////////////
+// B. Global Header
+//////////////////////////////////////////////
 
 #global-header {
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav > ul {
+        min-width: 360px;
+
+    }
     nav > ul > li {
         width: 33.3333%;
     }
 }
 
 //////////////////////////////////////////////
-// B. Theme Mode
+// C. Theme Mode Button Container
 //////////////////////////////////////////////
 
 .mode-toggle-button-container {
@@ -45,22 +50,34 @@ In this file:
     z-index: 10000;
 }
 
+
 //////////////////////////////////////////////
-// C. Scale on Hover Focus
+// D. Scale on Hover Focus
 //////////////////////////////////////////////
 
 .scale {
     transition: transform 0.25s ease-in-out;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         transform: scale(1.0375);
     }
 }
 
 //////////////////////////////////////////////
-// D. Lightbox
+// E. Lightbox
 //////////////////////////////////////////////
+
+// Scoped to Block
+
+%lightbox-vars {
+    --lightbox-vertical-align: flex-start;
+
+    --lightbox-overlay-color: white;
+    --lightbox-overlay-opacity: 0.9;
+
+    --lightbox-z-index: 20000;
+}
 
 .zoomable {
     transition: opacity 0.25s linear;
@@ -146,4 +163,13 @@ In this file:
     }
 }
 
+//////////////////////////////////////////////
+// F. Mobile sizes
+//////////////////////////////////////////////
 
+@include breakpoints.breakpoints-down(md){
+    :root {
+        --body-font-size: 20px;
+        --spacer-base: 0.75rem;
+    }
+}

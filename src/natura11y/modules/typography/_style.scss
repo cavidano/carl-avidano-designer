@@ -73,14 +73,6 @@ In this file:
     --paragraph-margin-bottom: 1.25em;
 }
 
-// Mobile sizes
-
-@include breakpoints.breakpoints-down(md){
-    :root {
-        --body-font-size: 18px;
-    }
-}
-
 //////////////////////////////////////////////
 // C. Font Weight Utilities
 //////////////////////////////////////////////

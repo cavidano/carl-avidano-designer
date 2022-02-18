@@ -17,7 +17,7 @@ const Header = () => {
             <p className='font-size-md'>Senior UX Designer</p>
         </Link>
 
-        <nav className="display-flex justify-content-center">
+        <nav>
 
             <ul className="nav nav--divider nav--horizontal border border-radius font-size-sm text-transform-uppercase">
                 <li>
