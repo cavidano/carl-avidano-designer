@@ -216,6 +216,7 @@ p ~ ol:not([class]) {
     }
 }
 
+ul.bulleted,
 p ~ ul:not([class]),
 p ~ ol:not([class]) {
     li {
@@ -223,6 +224,7 @@ p ~ ol:not([class]) {
     }
 }
 
+ul.bulleted,
 p ~ ul:not([class]) {
     --list-item-padding: 1em;
 

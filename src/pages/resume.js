@@ -96,7 +96,7 @@ const Resume = ({ data }) => {
 
                         </div>
 
-                        <div className="grid__colspan-2">
+                        <div className="grid__colspan-2--lg">
 
                             <p>
                                 Graduated with an Associate of Occupational Studies Degree in Graphic Design and Illustration.
@@ -118,7 +118,7 @@ const Resume = ({ data }) => {
                         
                         <div className="grid__colspan-1 font-size-md">
 
-                            <ul>
+                            <ul className="bulleted">
                                 <li>
                                     Content Strategy
                                 </li>
@@ -137,7 +137,7 @@ const Resume = ({ data }) => {
 
                         <div className="grid__colspan-1 font-size-md">
 
-                            <ul>
+                            <ul className="bulleted">
                                 <li>
                                     Branding/Identity Design
                                 </li>
@@ -156,7 +156,7 @@ const Resume = ({ data }) => {
 
                         <div className="grid__colspan-1 font-size-md">
 
-                            <ul>
+                            <ul className="bulleted">
                                 <li>
                                     Communication/Writing  
                                 </li>
