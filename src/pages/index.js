@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <Fragment>
 
-      <div className="height-100vh flex-column">
+      <div className="min-height-100vh flex-column">
 
         <Header />
 
@@ -18,7 +18,7 @@ const Home = () => {
           id="skip-header-target"
           style={{'minHeight': '400px'}}>
               
-          <section className="container medium align-self-center text-align-center">
+          <section className="container medium align-self-center text-align-center padding-y-4">
 
             <h1 className="banner-headline font-weight-bold margin-bottom-4">
               I seek to inspire empathy and inclusion through accessible experience and interaction design.
@@ -32,13 +32,9 @@ const Home = () => {
           </section>
 
         </main>
-
-        <div className="width-100">
-
-          <Footer />
-
-        </div>
-
+        
+        <Footer />
+       
       </div>
 
     </Fragment>
