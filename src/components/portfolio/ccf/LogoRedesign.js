@@ -10,8 +10,7 @@ function LogoRedesign() {
                     <figure>
                         <StaticImage
                             src="../../../images/cheetah-conservation-fund/ccf-logo-legacy.jpg"
-                            alt=""
-                            placeholder="dominantColor"
+                            alt="Old CCF logo"
                             layout="fullWidth"
                         />
                         <figcaption className="container">
@@ -21,8 +20,7 @@ function LogoRedesign() {
                     <figure>
                         <StaticImage
                             src="../../../images/cheetah-conservation-fund/ccf-logo-redesign.jpg"
-                            alt=""
-                            placeholder="dominantColor"
+                            alt="New CCF logo"
                             layout="fullWidth"
                         />
                         <figcaption className="container">
