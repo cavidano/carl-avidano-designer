@@ -174,6 +174,22 @@ const Resume = ({ data }) => {
 
                 </section>
 
+                <section className="border-top padding-y-3">
+                <h2 className="screen-reader-only">
+                    Download Resume (PDF)
+                </h2>
+
+                <div className="display-flex justify-content-end">
+
+                    <a className="button button--has-icon button--outline font-size-md" href="/resume-carl-avidano.pdf" download>
+                        <span className="icon icon-file-download"></span>
+                        <span className="button__text">Download PDF</span>
+                    </a>
+
+                </div>
+
+                </section>
+
             </main>
             
             <Footer backToTop={true} />
