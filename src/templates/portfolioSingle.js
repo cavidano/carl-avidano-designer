@@ -27,16 +27,25 @@ const shortcodes = {
 const portfolioSingle = ({ data }) => {
 
   const { title } = data.singleProject.frontmatter;
+  const { description } = data.singleProject.frontmatter;
   const { backgroundColor } = data.singleProject.frontmatter;
   const { textColor } = data.singleProject.frontmatter;
   const { body } = data.singleProject;
 
   const marqueeImage = getImage(data.singleProject.frontmatter.marqueeImage);
 
+  const customSEO = {
+    title: title,
+    description: description
+  }
+
   return (
     <Fragment>
 
-      <SEO title={title}  />
+      <SEO
+        title={customSEO.title}
+        description={customSEO.description}
+      />
 
       <div className="theme-primary"
         style={{
@@ -84,6 +93,7 @@ query queryPageData($slug: String) {
       body
       frontmatter {
           title
+          description
           backgroundColor
           textColor
           marqueeImage {

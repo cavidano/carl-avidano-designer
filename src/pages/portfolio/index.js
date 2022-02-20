@@ -10,12 +10,12 @@ import SEO from '../../components/Seo.js';
 
 const Portfolio = ({ data }) => {
 
-  const projects = data.allProjects.nodes;
-
   const customSEO = {
     title: 'Portfolio',
     description: 'Carl Avidano\'s featured design work.'
   }
+
+  const projects = data.allProjects.nodes;
 
   const myProjects = projects.map((project, index) => (
 
