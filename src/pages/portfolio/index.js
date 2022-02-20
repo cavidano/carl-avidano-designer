@@ -14,7 +14,7 @@ const Portfolio = ({ data }) => {
 
   const customSEO = {
     title: 'Portfolio',
-    description: 'Carl Avidano\'s featured design work'
+    description: 'Carl Avidano\'s featured design work.'
   }
 
   const myProjects = projects.map((project, index) => (
