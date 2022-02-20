@@ -4,10 +4,14 @@ import { Link } from 'gatsby';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
+import SEO from '../components/Seo.js';
 
 const Home = () => {
+
   return (
     <Fragment>
+
+      <SEO title='Home' />
 
       <div className="min-height-100vh flex-column">
 

@@ -4,10 +4,13 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
+import SEO from '../components/Seo.js';
 
 const About = () => {
   return (
     <Fragment>
+    
+        <SEO title='About' />
 
         <div className="backdrop backdrop--fixed min-height-100vh">
 
@@ -33,7 +36,7 @@ const About = () => {
 
                                 <div className="flex-row align-items-center">
 
-                                    <div className="border-radius-circle margin-top-3 margin-right-3 display-none--lg" style={{'max-width': '160px'}}>
+                                    <div className="border-radius-circle margin-top-3 margin-right-3 display-none--lg" style={{'maxWidth': '160px'}}>
                                         <StaticImage
                                             className="opacity-80"
                                             src="../images/self-square.jpg"
@@ -66,11 +69,11 @@ const About = () => {
                                 </h1>
 
                                 <p>
-                                    I've been doing design for a long time. Lucky for me, there's always something new and interesting to learn.
+                                    I've been designing and coding for a long time. Lucky for me, there's always something new and interesting to learn.
                                 </p>
 
                                 <p>
-                                    My design journey began in 2001 at a well-known Nebraska advertising agency. I moved to New York in 2010, to work for a small firm in Manhattan. Not long after, I decided to work independently (something I have always wanted to try).
+                                    My career journey began in 2001 at a well-known Nebraska advertising agency. I moved to New York in 2010, to work for a small firm in Manhattan. Not long after, I decided to work independently (something I have always wanted to try).
                                 </p>
                                 <p>
                                     I worked only with social impact organizations for more than seven years. My most recent experience is with New York City government, where I developed my passion for improving digital accessibility and inclusion. 

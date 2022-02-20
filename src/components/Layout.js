@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
-import { useStaticQuery, graphql } from 'gatsby';
-
 import { Helmet } from 'react-helmet';
 
 import '../icons/natura11y-icons.css';
@@ -70,25 +68,10 @@ const Layout = ({ children }) => {
     }
   }
 
-  const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          name
-          title
-        }
-      }
-    }
-  `);
-
-  const name = data.site.siteMetadata.name;
-  const title = data.site.siteMetadata.title;
-
   return (
     <Fragment>
-      
+
       <Helmet htmlAttributes={{ lang: 'en' }}>
-        <title>{name} • {title}</title>
         <link rel="stylesheet" href="https://use.typekit.net/tij3tin.css"></link>
       </Helmet>
 

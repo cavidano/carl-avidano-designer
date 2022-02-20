@@ -1,14 +1,13 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     name: "Carl Avidano",
     title: "Senior UX Designer",
+    titleTemplate: `%s • Carl Avidano • Senior UX Designer`,
+    description:
+      "Carl Avidano's UX Design portfolio.",
+    url: "https://design.carlavidano.com",
+    image: "/snape.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
+    twitterUsername: "@occlumency",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -68,5 +67,4 @@ module.exports = {
       },
     }
   ]
-  
 }

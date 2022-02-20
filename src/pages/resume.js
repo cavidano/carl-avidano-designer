@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
+import SEO from '../components/Seo.js';
 
 const Resume = ({ data }) => {
 
@@ -65,6 +66,8 @@ const Resume = ({ data }) => {
     
     return (
         <Fragment>
+
+            <SEO title="Resume" />
 
             <Header />
 
