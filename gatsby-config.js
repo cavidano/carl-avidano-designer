@@ -4,7 +4,7 @@ module.exports = {
     title: "Senior UX Designer",
     titleTemplate: `%s • Carl Avidano • Senior UX Designer`,
     description:
-      "Carl Avidano's UX Design portfolio.",
+      "Carl Avidano is a New York-based digital designer. Here you'll find Carl's design portfolio and resume.",
     url: "https://design.carlavidano.com",
     image: "/snape.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
     twitterUsername: "@occlumency",

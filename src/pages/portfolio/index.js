@@ -12,6 +12,11 @@ const Portfolio = ({ data }) => {
 
   const projects = data.allProjects.nodes;
 
+  const customSEO = {
+    title: 'Portfolio',
+    description: 'Carl Avidano\'s featured design work'
+  }
+
   const myProjects = projects.map((project, index) => (
 
     <Link
@@ -47,7 +52,10 @@ const Portfolio = ({ data }) => {
 
     <Fragment>
 
-      <SEO title="Portfolio" />
+      <SEO
+        title={customSEO.title}
+        description={customSEO.description}
+      />
 
       <Header />
 

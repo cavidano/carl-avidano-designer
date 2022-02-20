@@ -12,6 +12,11 @@ const Resume = ({ data }) => {
 
     const employment = data.allEmploymentYaml.nodes;
 
+    const customSEO = {
+        title: 'Resume',
+        description: 'Carl Avidano\'s professional resume.'
+    }
+
     const jobList = employment.map((job, index) => {
 
         let company = job.company;
@@ -66,8 +71,11 @@ const Resume = ({ data }) => {
     
     return (
         <Fragment>
-
-            <SEO title="Resume" />
+            
+            <SEO
+                title={customSEO.title}
+                description={customSEO.description}
+            />
 
             <Header />
 

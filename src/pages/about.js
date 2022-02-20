@@ -7,94 +7,102 @@ import Footer from '../components/Footer.js';
 import SEO from '../components/Seo.js';
 
 const About = () => {
-  return (
-    <Fragment>
     
-        <SEO title='About' />
+    const customSEO = {
+        title: 'About',
+        description: 'Carl Avidano\'s career at a glance.'
+    }
+    return (
+        <Fragment>
 
-        <div className="backdrop backdrop--fixed min-height-100vh">
+            <SEO
+                title={customSEO.title}
+                description={customSEO.description}
+            />
 
-            <div className="backdrop__image">
-                <StaticImage
-                    className="opacity-10 display-none display-block--lg"
-                    src="../images/self-square.jpg"
-                    alt="Carl Avidano"
-                />
-            </div>
+            <div className="backdrop backdrop--fixed min-height-100vh">
 
-            <div className="backdrop__cover flex-column min-height-100vh">
+                <div className="backdrop__image">
+                    <StaticImage
+                        className="opacity-10 display-none display-block--lg"
+                        src="../images/self-square.jpg"
+                        alt="Carl Avidano"
+                    />
+                </div>
 
-                <Header />
+                <div className="backdrop__cover flex-column min-height-100vh">
 
-                <div className="container narrow medium--lg flex-grow-1 padding-y-4">
+                    <Header />
 
-                    <div className="border-top">
+                    <div className="container narrow medium--lg flex-grow-1 padding-y-4">
 
-                        <div className="grid grid--column-2--lg gap-3">
+                        <div className="border-top">
 
-                            <section className="padding-y-3--lg">
+                            <div className="grid grid--column-2--lg gap-3">
 
-                                <div className="flex-row align-items-center">
+                                <section className="padding-y-3--lg">
 
-                                    <div className="border-radius-circle margin-top-3 margin-right-3 display-none--lg" style={{'maxWidth': '160px'}}>
-                                        <StaticImage
-                                            className="opacity-80"
-                                            src="../images/self-square.jpg"
-                                            alt="Carl Avidano"
-                                        />
+                                    <div className="flex-row align-items-center">
+
+                                        <div className="border-radius-circle margin-top-3 margin-right-3 display-none--lg" style={{'maxWidth': '160px'}}>
+                                            <StaticImage
+                                                className="opacity-80"
+                                                src="../images/self-square.jpg"
+                                                alt="Carl Avidano"
+                                            />
+                                        </div>
+
+                                        <div className="contact">
+
+                                            <p className="margin-bottom-1">
+                                                <strong>
+                                                    New York City
+                                                </strong> 
+                                            </p>
+
+                                            <p className="font-size-md">
+                                                <span className="display-block">(718) 737-8545</span>
+                                                <a href="#!">cavidano@gmail.com</a>  
+                                            </p> 
+                                        </div>
+                                    
                                     </div>
 
-                                    <div className="contact">
+                                </section>
 
-                                        <p className="margin-bottom-1">
-                                            <strong>
-                                                New York City
-                                            </strong> 
-                                        </p>
+                                <section className="padding-y-3--lg">
 
-                                        <p className="font-size-md">
-                                            <span className="display-block">(718) 737-8545</span>
-                                            <a href="#!">cavidano@gmail.com</a>  
-                                        </p> 
-                                    </div>
-                                
-                                </div>
+                                    <h1>
+                                        I'm a seasoned interaction designer.
+                                    </h1>
 
-                            </section>
+                                    <p>
+                                        I've been designing and coding for a long time. Lucky for me, there's always something new and interesting to learn.
+                                    </p>
 
-                            <section className="padding-y-3--lg">
+                                    <p>
+                                        My career journey began in 2001 at a well-known Nebraska advertising agency. I moved to New York in 2010, to work for a small firm in Manhattan. Not long after, I decided to work independently (something I have always wanted to try).
+                                    </p>
+                                    <p>
+                                        I worked only with social impact organizations for more than seven years. My most recent experience is with New York City government, where I developed my passion for improving digital accessibility and inclusion. 
+                                    </p>
 
-                                <h1>
-                                    I'm a seasoned interaction designer.
-                                </h1>
+                                </section>
 
-                                <p>
-                                    I've been designing and coding for a long time. Lucky for me, there's always something new and interesting to learn.
-                                </p>
-
-                                <p>
-                                    My career journey began in 2001 at a well-known Nebraska advertising agency. I moved to New York in 2010, to work for a small firm in Manhattan. Not long after, I decided to work independently (something I have always wanted to try).
-                                </p>
-                                <p>
-                                    I worked only with social impact organizations for more than seven years. My most recent experience is with New York City government, where I developed my passion for improving digital accessibility and inclusion. 
-                                </p>
-
-                            </section>
+                            </div>
 
                         </div>
-
+                        
                     </div>
                     
-                </div>
+                    <Footer />
                 
-                <Footer />
-            
+                </div>
+
             </div>
 
-        </div>
-
-    </Fragment>
-  );
+        </Fragment>
+    );
 }
 
 export default About;
