@@ -35,7 +35,7 @@ const Portfolio = ({ data }) => {
         />
       </div>
 
-      <div className="backdrop__cover justify-content-end">
+      <div className="backdrop__cover justify-content-start align-content-end">
 
           <div className="container width-100 margin-y-2">
               <p className="h6">

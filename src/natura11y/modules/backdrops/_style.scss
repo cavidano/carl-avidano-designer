@@ -25,7 +25,7 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --backdrop-fixed-height: initial;
+    --backdrop-fixed-height: 400px;
 }
 
 //////////////////////////////////////////////
@@ -59,10 +59,9 @@ In this file:
     bottom: 0;
     left: 0;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
-    place-items: end start;
+    place-content: center;
 }
 
 .backdrop__credit {
@@ -105,16 +104,11 @@ In this file:
 .backdrop--fixed {
     @extend %custom-properties;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    
+    place-content: center;
     
     min-height: var(--backdrop-fixed-height);
-    
-    > *:not(.backdrop__credit) {
-        position: relative;
-        width: 100%;
-    }
 
     .backdrop__image {
         position: absolute;
@@ -133,11 +127,7 @@ In this file:
     }
 
     .backdrop__cover {
-        display: initial;
-
         position: relative;
-        
-        width: 100%;
     }
     
     @include breakpoints.breakpoints-down(md) {

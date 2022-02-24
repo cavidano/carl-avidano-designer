@@ -8,13 +8,10 @@ export default class Forms {
 
     constructor() {
 
-        // Get each form on page
         const formList = document.querySelectorAll('form[novalidate]');
         
-        // Get each form entry on page (with and without form parent)
         const formEntryList = document.querySelectorAll('.form-entry');
 
-        // Set form submit to false
         let formSubmitAttempted = false;
 
         const checkIfEmpty = (field) => {
@@ -28,26 +25,26 @@ export default class Forms {
         }
 
         const isEmpty = (value = null) => {
-            if (value === "") return true;
+            if (value === '') return true;
             return false;
         }
 
-        const invalidClasses = ["is-invalid"];
+        const invalidClasses = ['is-invalid'];
 
         const setInvalid = (field) => {
-            let entryRoot = field.closest(".form-entry");
+            let entryRoot = field.closest('.form-entry');
             entryRoot.classList.add(...invalidClasses);
         }
 
         const setValid = (field) => {
-            let entryRoot = field.closest(".form-entry");
+            let entryRoot = field.closest('.form-entry');
             entryRoot.classList.remove(...invalidClasses);
         }
 
         const createErrorMessage = ((desc, inst) => {
             
             if(desc === null) {
-                desc = "This field is Required";
+                desc = 'This field is Required';
             }
             
             return (`
@@ -55,7 +52,7 @@ export default class Forms {
                     <small>
                         <span class="icon icon-warn" aria-hidden="true"></span>
                         <span class="message">
-                            <strong>${desc}</strong> ${inst && inst}
+                            <strong>${desc}</strong> ${inst !== undefined ? inst : ''}
                         </span>
                     </small>
                 </div>
@@ -272,10 +269,10 @@ export default class Forms {
                 fileUpload.closest('.form-entry').classList.remove('active');
             }
 
-            fileUpload.addEventListener("dragenter", dragOver);
-            fileUpload.addEventListener("dragleave", dragOff);
-            fileUpload.addEventListener("dragend", dragOff);
-            fileUpload.addEventListener("drop", dropped);
+            fileUpload.addEventListener('dragenter', dragOver);
+            fileUpload.addEventListener('dragleave', dragOff);
+            fileUpload.addEventListener('dragend', dragOff);
+            fileUpload.addEventListener('drop', dropped);
         });
     }
 }
