@@ -2,7 +2,7 @@
   "name": "carl-avidano-designer",
   "private": true,
   "description": "Carl Avidano's UX Portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
