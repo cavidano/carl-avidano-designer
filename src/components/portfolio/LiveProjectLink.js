@@ -7,7 +7,8 @@ const LiveProjectLink = (props) => {
       <a
         className="button button--outline button--has-icon text-color-link"
         href={linkURL ? linkURL : '#1'}
-        target={linkURL ? '_blank' : '_self'}>
+        target={linkURL ? '_blank' : '_self'}
+        rel="noreferrer">
             <span className="button__text">See it live</span>
             <span className="icon icon-arrow-right"></span>
         </a>

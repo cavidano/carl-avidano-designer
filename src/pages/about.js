@@ -1,10 +1,10 @@
-import React, {Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
-import SEO from '../components/Seo.js';
+import Seo from '../components/Seo.js';
 
 const About = () => {
     
@@ -12,10 +12,11 @@ const About = () => {
         title: 'About',
         description: 'Carl Avidano\'s career at a glance.'
     }
+
     return (
         <Fragment>
 
-            <SEO
+            <Seo
                 title={customSEO.title}
                 description={customSEO.description}
             />

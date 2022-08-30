@@ -6,7 +6,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../../components/Header.js';
 import Footer from '../../components/Footer.js';
-import SEO from '../../components/Seo.js';
+
+import Seo from '../../components/Seo.js';
 
 const Portfolio = ({ data }) => {
 
@@ -52,7 +53,7 @@ const Portfolio = ({ data }) => {
 
     <Fragment>
 
-      <SEO
+      <Seo
         title={customSEO.title}
         description={customSEO.description}
       />

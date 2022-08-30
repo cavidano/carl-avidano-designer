@@ -8,7 +8,7 @@ import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
-import SEO from '../components/Seo.js';
+import Seo from '../components/Seo.js';
 
 import TextBlock from '../components/portfolio/TextBlock.js';
 import IntroBlock from '../components/portfolio/IntroBlock.js';
@@ -42,7 +42,7 @@ const portfolioSingle = ({ data }) => {
   return (
     <Fragment>
 
-      <SEO
+      <Seo
         title={customSEO.title}
         description={customSEO.description}
       />
