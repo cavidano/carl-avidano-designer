@@ -9,13 +9,15 @@ import { getFocusableElements } from '../../utilities/focus';
 export default class Accordion {
 
     constructor() {
-        
-        const accordionList = document.querySelectorAll('.accordion');
+        this.accordionList = document.querySelectorAll('.accordion');
+    }
 
-        accordionList.forEach((accordion) => {
+    init() {
 
-            const accordionButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
-            const accordionPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
+        this.accordionList.forEach((accordion) => {
+
+            const accordionButtonList = accordion.querySelectorAll(':scope > [data-accordion="button"]');
+            const accordionPanelList = accordion.querySelectorAll(':scope > [data-accordion="panel"]');
 
             const setFocusableElements = (element = document, focusable = false) => {
 
@@ -119,18 +121,11 @@ export default class Accordion {
                         }
                     }
 
-                    const key = event.keyCode;
-
-                    const keyCodes = {
-                        arrowUp: 38,
-                        arrowDown: 40
-                    };
-
-                    switch (key) {
-                        case keyCodes.arrowUp:
+                    switch (event.code) {
+                        case 'ArrowUp':
                             directionalFocus(-1);
                             break;
-                        case keyCodes.arrowDown:
+                        case'ArrowDown':
                             directionalFocus(1);
                             break;
                         default:
@@ -140,7 +135,7 @@ export default class Accordion {
                 });
 
                 accordionButton.addEventListener('keyup', (event) => {
-                    if (event.keyCode === 13 && event.target.tagName !== 'BUTTON') {
+                    if (event.code === 'Enter' && event.target.tagName !== 'BUTTON') {
                         initAccordion(event);
                     }
                 });
@@ -148,6 +143,5 @@ export default class Accordion {
             });
 
         });
-    
     }
 }

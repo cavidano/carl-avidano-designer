@@ -6,12 +6,14 @@ In this file:
 // B. Variables
 // C. Font Weight Utilities
 // D. Font Size Utilities
-// E. Headers
-// F. Body Selectors
-// G. Text Align Utilities
-// H. Text Transform Utilities
-// I. Word Wrap Utilities
-// J. Truncate Text Utility
+// E. Headings
+// F. Banner Headline Utility
+// G. Body Selectors
+// H. Text Align Utilities
+// I. Text Transform Utilities
+// J. Text Decoration Utilities
+// K. Word Wrap Utilities
+// L. Truncate Text Utility
 
 */
 
@@ -35,38 +37,42 @@ In this file:
 
     // Body Font Stack
 
-    --body-font-family: "neue-haas-grotesk-display";
+    --body-font-family: "Source Sans Pro", sans-serif;
     
-    --body-font-weight-normal: 500;
+    --body-font-weight-normal: 400;
     --body-font-weight-medium: 600;
-    --body-font-weight-bold: 900;
+    --body-font-weight-bold: 700;
 
-    --body-font-size: 24px;
+    --body-font-size: 20px;
+
     --body-line-height: 1.5;
 
     // Font Sizes
 
-    --font-size-sm: calc(var(--body-font-size) * 0.625);  // ~ 16.5px
-    --font-size-md: calc(var(--body-font-size) * 0.75);  // ~ 18px
+    --font-size-sm: calc(var(--body-font-size) * 0.75);  // ~ 16.5px
+    --font-size-md: calc(var(--body-font-size) * 0.825);  // ~ 18px
     --font-size-rg: calc(var(--body-font-size) * 1);    // = 22px
-    --font-size-lg: calc(var(--body-font-size) * 2);  // ~ 26px
-    --font-size-xl: calc(var(--body-font-size) * 3);  // ~ 30px
+    --font-size-lg: calc(var(--body-font-size) * 1.375);  // ~ 26px
+    --font-size-xl: calc(var(--body-font-size) * 1.75);  // ~ 30px
 
     // Headers
 
-    --h1-font-size: calc(var(--body-font-size) * 2.375);    // ~ 60px
+    --h1-font-size: calc(var(--body-font-size) * 2.5);    // ~ 60px
     --h2-font-size: calc(var(--body-font-size) * 2);  // ~ 48px
-    --h3-font-size: calc(var(--body-font-size) * 1.5);  // ~ 40px
-    --h4-font-size: calc(var(--body-font-size) * 1.25);  // ~ 35px
-    --h5-font-size: calc(var(--body-font-size) * 1.125);  // ~ 30px
+    --h3-font-size: calc(var(--body-font-size) * 1.6);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.4);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.2);  // ~ 30px
     --h6-font-size: calc(var(--body-font-size) * 1);  // ~ 26px
 
-    --header-line-height: 1.25;
+    --header-line-height: 1.125;
+
+    --header-margin-bottom: 0.375em;
 
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 2.75);
-    --banner-headline-font-weight: var(--body-font-weight-bold);
+    --banner-headline-font-size-sm: calc(var(--body-font-size) * 2.75);
+    --banner-headline-font-size-lg: calc(var(--body-font-size) * 4);
+    --banner-headline-font-weight: var(--body-font-weight-normal);
 
     // Paragraph
 
@@ -116,31 +122,39 @@ $font-sizes: (
     )
 );
 
-@each $key, $font-size-map in $font-sizes {
-    .font-size-#{$key} {
-        font-size: map.get($font-size-map, "size") !important;
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        @if map.has-key($font-size-map, "line-height") {
-            line-height: map.get($font-size-map, "line-height");
+        @each $key, $font-size-map in $font-sizes {
+            .font-size-#{$key}#{$mod} {
+                font-size: map.get($font-size-map, "size") !important;
+
+                @if map.has-key($font-size-map, "line-height") {
+                    line-height: map.get($font-size-map, "line-height");
+                }
+            }
         }
     }
 }
 
 //////////////////////////////////////////////
-// E. Headers
+// E. Headings
 //////////////////////////////////////////////
 
-h1, .h1,
-h2, .h2, 
-h3, .h3,
-h4, .h4,
-h5, .h5, 
-h6, .h6 {
+:is(
+    h1, .h1,
+    h2, .h2, 
+    h3, .h3,
+    h4, .h4,
+    h5, .h5, 
+    h6, .h6 
+) {
     font-weight: var(--body-font-weight-bold);
     line-height: var(--header-line-height);
 
     &:not(.accordion__button):not(.alert__title):not(:last-child){
-        margin-block-end: var(--spacer-2);
+        margin-block-end: var(--header-margin-bottom);
     }
 }
 
@@ -185,21 +199,28 @@ $headers: (
     }
 }
 
+//////////////////////////////////////////////
+// F. Banner Headline Utility
+//////////////////////////////////////////////
+
 .banner-headline {
     font-weight: var(--banner-headline-font-weight);
+
+    font-size: var(--banner-headline-font-size-sm);
+
     line-height: var(--header-line-height);
 
-    @include breakpoints.breakpoints-up(lg){
-        font-size: var(--banner-headline-font-size);
+    @include breakpoints.breakpoints-up(lg) {
+        font-size: var(--banner-headline-font-size-lg);
     }
 }
 
 //////////////////////////////////////////////
-// F. Body Selectors
+// G. Body Selectors
 //////////////////////////////////////////////
 
 body {
-    font-family: var(--body-font-family, sans-serif);
+    font-family: var(--body-font-family);
 
     font-size: var(--body-font-size);
     
@@ -216,15 +237,13 @@ p ~ ol:not([class]) {
     }
 }
 
-ul.bulleted,
-p ~ ul:not([class]),
-p ~ ol:not([class]) {
-    li {
-        margin-block-end: var(--spacer-1);
-    }
+:is(
+    p ~ ul:not([class]),
+    p ~ ol:not([class]) 
+) li {
+    margin-block-end: var(--spacer-1);
 }
 
-ul.bulleted,
 p ~ ul:not([class]) {
     --list-item-padding: 1em;
 
@@ -258,19 +277,19 @@ ol:not([class]) {
 }
 
 figure {
-    > p {
-        margin-block-end: unset;
-    }
     figcaption {
         font-size: var(--font-size-sm);
-        opacity: 0.75;
-        margin-block-start: var(--spacer-1);
-        text-align: center;
+        opacity: 0.85;
+        margin-block-start: var(--spacer-2);
     }
 }
 
+.blockquote {
+    margin-block-end: var(--paragraph-margin-bottom);
+}
+
 //////////////////////////////////////////////
-// G. Text Align Utilities
+// H. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -293,7 +312,7 @@ figure {
 }
 
 //////////////////////////////////////////////
-// H. Text Transform Utilities
+// I. Text Transform Utilities
 //////////////////////////////////////////////
 
 .text-transform-capitalize {
@@ -309,7 +328,27 @@ figure {
 }
 
 //////////////////////////////////////////////
-// I. Word Wrap Utilities
+// J. Text Decoration Utilities
+//////////////////////////////////////////////
+
+[class*="text-decoration-"] {
+    --line-thickness: auto;
+}
+
+.text-decoration-underline {
+    text-decoration: underline var(--line-thickness);
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through var(--line-thickness);
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+//////////////////////////////////////////////
+// K. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -321,7 +360,7 @@ figure {
 }
 
 ////////////////////////////////////////
-// J. Truncate Text Utility
+// L. Truncate Text Utility
 ////////////////////////////////////////
 
 .truncate-text {

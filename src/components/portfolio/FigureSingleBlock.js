@@ -37,7 +37,7 @@ const FigureSingleBlock = ({ children, ...props }) => {
     return (
         <Fragment>
 
-            <figure className="medium margin-y-5">
+            <figure className="medium margin-x-auto margin-y-5">
 
                 {lightbox ? (
 

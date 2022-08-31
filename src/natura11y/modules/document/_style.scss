@@ -28,7 +28,7 @@ In this file:
 %custom-properties {
     --body-min-width: 325px;
     --body-max-width: 100%;
-    --html-background-color: transparent;
+    --html-background-color: var(--canvas);
 }
 
 ////////////////////////////////////////
@@ -106,7 +106,7 @@ html {
 
     text-size-adjust: 100%;
 
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
     &:not([class*="theme-"]):not([class*="background-color"]) {
         background-color: var(--html-background-color);

@@ -21,13 +21,14 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --container-padding-x: var(--spacer-3);
+    --container-padding-x-sm: var(--spacer-2);
+    --container-padding-x-lg: var(--spacer-3);
 
-    --narrow-width: 44rem; // Approximately 55 characters wide for readability
+    --narrow-width: 40rem; // Approximately 55 characters wide for readability
     
-    --medium-width: calc( var(--narrow-width) * 2);
+    --medium-width: calc( var(--narrow-width) * 1.75);
     
-    --wide-width: calc( var(--narrow-width) * 3);
+    --wide-width: calc( var(--narrow-width) * 2.5);
 }
 
 //////////////////////////////////////////////
@@ -35,18 +36,17 @@ In this file:
 //////////////////////////////////////////////
 
 .container {
-    padding-inline: var(--container-padding-x);
+    padding-inline: var(--container-padding-x-sm);
+    margin-inline: auto;
+
+    @include breakpoints.breakpoints-up(lg) {
+        padding-inline: var(--container-padding-x-lg);
+    }
 }
 
 //////////////////////////////////////////////
 // D. Narrow, Medium, and Wide Utilities
 //////////////////////////////////////////////
-
-.narrow,
-.medium,
-.wide {
-    margin-inline: auto;
-}
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
     @include breakpoints.breakpoints-up($breakpoint) {

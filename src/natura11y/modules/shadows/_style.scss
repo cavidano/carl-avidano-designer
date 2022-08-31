@@ -66,14 +66,6 @@ In this file:
     }
 }
 
-.figure-has-shadow img {
-    @extend %box-shadow-vars;
-
-    --base-shadow-unit: 2rem;
-    --shadow-opacity: var(--base-shadow-opacity);
-
-}
-
 //////////////////////////////////////////////
 // D. Text Shadow Utility
 //////////////////////////////////////////////
