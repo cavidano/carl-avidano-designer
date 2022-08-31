@@ -67,6 +67,7 @@ import './src/natura11y/modules/typography';
 import './src/natura11y/modules/z-index';
 
 import './src/natura11y/theme';
+
 import './src/icons/natura11y-icons.css';
 
 import Layout from './src/components/Layout';
