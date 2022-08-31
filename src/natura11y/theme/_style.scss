@@ -4,10 +4,12 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Theme Mode Container
-// D. Scale on Hover Focus
-// E. Lightbox
-// F. Mobile sizes
+// C. Global Header
+// D. Theme Mode Button Container
+// E. Scale on Hover Focus
+// F. Lightbox
+// G. Dark Mode
+// H. Mobile Viewports
 
 */
 
@@ -18,9 +20,8 @@ In this file:
 @use "../modules/breakpoints/style" as breakpoints;
 
 //////////////////////////////////////////////
-// B. Custom Properties
+// B. Variables
 //////////////////////////////////////////////
-
 
 :root {
 
@@ -60,7 +61,7 @@ In this file:
 
     // Color
 
-    --light: #F5F5F5;
+    --canvas: #F5F5F5;
     --dark: #181818;
 
     // Containers
@@ -70,13 +71,10 @@ In this file:
     --medium-width: calc( var(--narrow-width) * 2);
     
     --wide-width: calc( var(--narrow-width) * 3);
-
 }
 
-
-
 //////////////////////////////////////////////
-// B. Global Header
+// C. Global Header
 //////////////////////////////////////////////
 
 #global-header {
@@ -94,7 +92,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Theme Mode Button Container
+// D. Theme Mode Button Container
 //////////////////////////////////////////////
 
 .mode-toggle-button-container {
@@ -110,7 +108,7 @@ In this file:
 
 
 //////////////////////////////////////////////
-// D. Scale on Hover Focus
+// E. Scale on Hover Focus
 //////////////////////////////////////////////
 
 .scale {
@@ -123,7 +121,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// E. Lightbox
+// F. Lightbox
 //////////////////////////////////////////////
 
 // Scoped to Block
@@ -222,12 +220,24 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// F. Mobile sizes
+// G. Dark Mode
+//////////////////////////////////////////////
+
+[data-mode="dark"] {
+    --canvas: var(--dark);
+    --canvas-text: var(--dark-text);
+    --canvas-border: var(--dark-border);
+    --canvas-link: var(--dark-link);
+    --canvas-confirm: var(--dark-confirm);
+    --canvas-warn: var(--dark-warn);
+}
+
+//////////////////////////////////////////////
+// H. Mobile Viewports
 //////////////////////////////////////////////
 
 @include breakpoints.breakpoints-down(md){
     :root {
         --body-font-size: 20px;
-        --spacer-base: 0.75rem;
     }
 }
