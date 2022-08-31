@@ -232,6 +232,17 @@ In this file:
     --canvas-warn: var(--dark-warn);
 }
 
+.custom-opacity {
+
+    [data-mode="dark"] & {
+        filter: opacity(0.1);
+    }
+
+    [data-mode="light"] & {
+        filter: opacity(0.175);
+    }
+}
+
 //////////////////////////////////////////////
 // H. Mobile Viewports
 //////////////////////////////////////////////

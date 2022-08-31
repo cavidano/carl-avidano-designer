@@ -25,7 +25,7 @@ const About = () => {
 
                 <div className="backdrop__image">
                     <StaticImage
-                        className="opacity-10 display-none display-block--lg"
+                        className="custom-opacity display-none display-block--lg"
                         src="../images/self-square.jpg"
                         alt="Carl Avidano"
                     />
