@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 function LogoRedesign() {
     return (
         <Fragment>
-            <div className="medium margin-y-5">
+            <div className="medium margin-x-auto margin-y-5">
                 <div className="grid grid--column-2 gap-2">
                     <figure>
                         <StaticImage
