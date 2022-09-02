@@ -1,6 +1,4 @@
-import React, { Fragment } from 'react';
-
-import { v4 as uuidv4 } from 'uuid';
+import React, { Fragment, useRef, useState } from 'react';
 
 import LightBox from './Lightbox';
 
@@ -8,29 +6,31 @@ const FigureSingleBlock = ({ children, ...props }) => {
 
     const { caption, lightbox } = props;
 
-    const lightboxID = uuidv4();
+    const [lightboxOpen, setlightboxOpen] = useState(false);
+
+    const lightboxRef = useRef();
+
+    const lightboxContainerRef = useRef();
 
     const handleOpen = (e) => {
-        const targetLightbox = document.getElementById(lightboxID);
-        
-        const lightboxContainer = targetLightbox.querySelector('.lightbox__container');
-        
+                
+        setlightboxOpen(true);
+
         const viewportHeight = window.innerHeight;
 
         const targetHeight = e.target.offsetHeight; 
 
         if(targetHeight < viewportHeight){
-            lightboxContainer.style.setProperty('--lightbox-vertical-align', 'center');
+            lightboxContainerRef.current.style.setProperty('--lightbox-vertical-align', 'center');
         }
 
-        targetLightbox.classList.add('shown');
         document.querySelector('body').classList.add('modal-open');
     }
 
     const handleClose = () => {
-        const targetLightbox = document.getElementById(lightboxID);
 
-        targetLightbox.classList.remove('shown');
+        setlightboxOpen(false);
+
         document.querySelector('body').classList.remove('modal-open');
     }
         
@@ -68,7 +68,9 @@ const FigureSingleBlock = ({ children, ...props }) => {
             {lightbox && (
 
             <LightBox
-                id={lightboxID}
+                ref={lightboxRef}
+                lightboxContainerRef={lightboxContainerRef}
+                lightboxOpen={lightboxOpen}
                 handleClose={handleClose}>
                 {children}
             </LightBox>

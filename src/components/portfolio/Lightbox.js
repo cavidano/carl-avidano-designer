@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LightBox = ({children, handleClose, id}) => {
+const LightBox = ({ lightboxContainerRef, lightboxOpen, handleClose, children }) => {
 
 	return (
-		<div className="lightbox" id={id} onClick={handleClose}>
+		<div className={`lightbox ${lightboxOpen ? 'shown' : ''}` } onClick={handleClose}>
 
 			<div className="lightbox__actions font-size-md">
 
@@ -13,9 +13,10 @@ const LightBox = ({children, handleClose, id}) => {
 
 			</div>
 
-			<div className="lightbox__container">
+			<div className="lightbox__container" ref={lightboxContainerRef}>
 				{children}
 			</div>
+
 		</div>
 	);
 };
